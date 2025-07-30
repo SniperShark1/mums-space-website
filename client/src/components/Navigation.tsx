@@ -17,7 +17,6 @@ const Navigation = () => {
     { id: 'download', label: 'Download' },
     { id: 'about', label: 'About' },
     { id: 'library', label: 'eBook Library' },
-    { id: 'contact', label: 'Contact' },
     { id: 'policies', label: 'Policies' },
   ];
 

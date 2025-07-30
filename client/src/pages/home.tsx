@@ -1,55 +1,14 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Smartphone, Monitor, Download, Heart, Users, Lock, Mail, Instagram, CheckCircle, BookOpen } from "lucide-react";
+import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(1, "Please select a subject"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
-
-type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Home = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
-  });
-
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message! We'll get back to you soon.",
-    });
-    
-    form.reset();
-    setIsSubmitting(false);
-  };
 
   const handleDownload = (platform: string) => {
     toast({
@@ -376,154 +335,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16">
+      {/* Newsletter Section */}
+      <section id="newsletter" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Contact & Support</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-mums-dark">Get Notified About Mum's Space Updates</h2>
             
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="Your full name" 
-                              className="bg-white bg-opacity-70 border-mums-accent border-opacity-30"
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email</FormLabel>
-                          <FormControl>
-                            <Input 
-                              type="email"
-                              placeholder="your.email@example.com"
-                              className="bg-white bg-opacity-70 border-mums-accent border-opacity-30"
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger className="bg-white bg-opacity-70 border-mums-accent border-opacity-30">
-                                <SelectValue placeholder="Select a subject" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="general">General Inquiry</SelectItem>
-                              <SelectItem value="technical">Technical Support</SelectItem>
-                              <SelectItem value="guidelines">Community Guidelines</SelectItem>
-                              <SelectItem value="account">Account Issues</SelectItem>
-                              <SelectItem value="suggestions">Suggestions</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="How can we help you?"
-                              className="bg-white bg-opacity-70 border-mums-accent border-opacity-30"
-                              rows={4}
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full bg-mums-accent hover:bg-mums-dark text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300"
-                    >
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
-                </Form>
-              </div>
-
-              {/* Contact Information */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Other Ways to Reach Us</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Email Support</h4>
-                      <p className="text-gray-600">support@mumsspace.com</p>
-                      <p className="text-sm text-gray-500">We respond within 24 hours</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Instagram className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Social Media</h4>
-                      <p className="text-gray-600">@mumsspace</p>
-                      <p className="text-sm text-gray-500">Follow us for updates and tips</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">FAQ & Help Center</h4>
-                      <p className="text-gray-600">Find instant answers</p>
-                      <p className="text-sm text-gray-500">Available 24/7 in the app</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-4 bg-mums-light bg-opacity-50 rounded-xl">
-                  <h4 className="font-semibold mb-2">Emergency Support</h4>
-                  <p className="text-sm text-gray-600">If you're in crisis or need immediate help, please contact your local emergency services or mental health crisis line.</p>
-                </div>
-              </div>
+            <div className="text-center max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 mb-8">
+                Enter your email below to get notified when we launch new features or have exciting news. We'll keep you in the loop—no spam, ever.
+              </p>
+              
+              <NewsletterSignup />
+              
+              <p className="text-sm text-gray-600 mt-6">
+                You can unsubscribe at any time. For urgent help, please contact your local support line.
+              </p>
             </div>
           </Card>
         </div>
