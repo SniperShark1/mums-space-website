@@ -443,28 +443,54 @@ const Home = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 flex items-center">
                   <Lock className="mr-3 w-6 h-6" />
-                  Privacy & Data Protection
+                  Privacy & Data Protection — ID Verification
                 </h3>
                 <div className="bg-white bg-opacity-50 rounded-xl p-6">
-                  <p className="mb-4">Your privacy is our priority. Here's how we protect your information:</p>
-                  <div className="grid md:grid-cols-2 gap-6 text-sm">
+                  <div className="space-y-6">
                     <div>
-                      <h5 className="font-medium mb-2">Data We Collect:</h5>
-                      <ul className="space-y-1 text-gray-700">
-                        <li>• Profile information you provide</li>
-                        <li>• Messages and posts you share</li>
-                        <li>• App usage and preferences</li>
-                        <li>• Device and connection information</li>
+                      <h4 className="font-semibold mb-3 text-mums-dark">Why do we verify your ID?</h4>
+                      <p className="text-gray-700 leading-relaxed">
+                        To keep Mum's Space a safe, supportive women-only community, we may ask you to upload a photo of your government-issued ID and a selfie. This helps us protect against fake accounts and keep all members safe.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-3 text-mums-dark">How is your information used?</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• Your ID and selfie are used only to confirm your identity and eligibility for our community.</li>
+                        <li>• Your information is not used for any other purpose and is never shared with third parties.</li>
                       </ul>
                     </div>
+
                     <div>
-                      <h5 className="font-medium mb-2">How We Protect You:</h5>
-                      <ul className="space-y-1 text-gray-700">
-                        <li>• End-to-end encryption for messages</li>
-                        <li>• No data sharing with third parties</li>
-                        <li>• Secure servers and regular audits</li>
-                        <li>• You control your data and can delete it</li>
+                      <h4 className="font-semibold mb-3 text-mums-dark">How is your information stored?</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• All ID images are stored securely with access limited to our verification team.</li>
+                        <li>• As soon as your verification is complete, your ID and selfie are permanently deleted from our system.</li>
                       </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-3 text-mums-dark">How long do we keep your ID?</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• We keep your ID images only as long as necessary to review and verify your account.</li>
+                        <li>• Once verification is done, all copies of your ID are deleted.</li>
+                        <li>• We never keep your ID on file after this.</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-3 text-mums-dark">Your rights:</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• You can request to see, update, or delete your data at any time by contacting our support team.</li>
+                        <li>• For more information, see our full Privacy Policy or email us at support@mumsspace.com.</li>
+                      </ul>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-mums-light bg-opacity-50 rounded-lg border-l-4 border-mums-accent">
+                      <p className="text-sm font-medium text-mums-dark">
+                        By using Mum's Space, you agree to this privacy policy and our community guidelines.
+                      </p>
                     </div>
                   </div>
                 </div>
