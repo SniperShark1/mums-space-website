@@ -1,0 +1,157 @@
+Project Title: Mum’s Space Official Website
+
+Purpose:
+A simple, soft, and welcoming website for the Mum’s Space app—focused on mothers/women. The site should let users download or install the app for iPhone, Android, or PC, and explain the community’s mission and women-only policy.
+
+Branding:
+
+    Main background color: #f6cbcd (soft pink)
+
+    Logo: (Upload your logo file in /public or /assets folder)
+
+    Love hearts: Only as a gentle, low-opacity accent behind the logo—not on the rest of the site.
+
+    Font: Bodoni Moda (Google Fonts)
+
+Required Pages/Sections:
+
+    Home/Landing — Logo, soft hearts, “Welcome,” and a Download/Join button.
+
+    Download — Instructions/links for iPhone, Android, and PC downloads.
+
+    About — Info on your story, the community, and the mission.
+
+    Contact/Support — Contact form or email, social links.
+
+    Policies/Guidelines — Women-only message, privacy, terms.
+
+Other:
+
+    Mobile-responsive design.
+
+    Clear, friendly language.
+
+    Community affirmation:
+    “Mum’s Space is a women-only community. By joining, you affirm you are a woman/mum and agree to our community rules.”
+
+2. Starter HTML File for Replit
+
+Here’s a simple index.html you can paste into your Replit project:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mum's Space</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bodoni+Moda:400,700&display=swap"/>
+  <style>
+    body {
+      background: #f6cbcd;
+      margin: 0;
+      font-family: 'Bodoni Moda', serif;
+      color: #8E294F;
+      min-height: 100vh;
+    }
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 0 24px 0;
+      position: relative;
+    }
+    .hearts {
+      position: absolute;
+      top: 38px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .heart {
+      opacity: 0.14;
+      font-size: 58px;
+      margin: 0 12px;
+      color: #ec719e;
+      filter: blur(1px);
+    }
+    .logo-img {
+      width: 200px;
+      height: auto;
+      z-index: 1;
+    }
+    .main-content {
+      max-width: 440px;
+      margin: 40px auto 0 auto;
+      background: rgba(255,255,255,0.65);
+      border-radius: 24px;
+      padding: 36px 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .download-btn {
+      background: #ec719e;
+      color: #fff;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 22px;
+      padding: 12px 32px;
+      margin-top: 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: #8E294F;
+    }
+    @media (max-width: 700px) {
+      .main-content {
+        margin: 24px 8px 0 8px;
+        padding: 24px 8px;
+      }
+      .logo-img {
+        width: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-section">
+    <div class="hearts">
+      <span class="heart">❤️</span>
+      <span class="heart">💗</span>
+      <span class="heart">💖</span>
+    </div>
+    <img class="logo-img" src="your-logo.png" alt="Mum's Space Logo"/>
+  </div>
+  <div class="main-content">
+    <h1>Welcome to Mum’s Space</h1>
+    <p>The private support space for mums and women—by mums, for mums.</p>
+    <button class="download-btn" onclick="window.location.href='#download'">
+      Download / Join
+    </button>
+    <p style="margin-top:28px; font-size:0.98em; color:#8E294F;">
+      <strong>Note:</strong> This is a women-only community. By joining, you affirm you are a woman/mum and agree to our community rules.
+    </p>
+  </div>
+  <!-- Add navigation/menu here if you want -->
+
+  <!-- Add other sections/pages as needed, or use separate files/components for About, Download, etc. -->
+</body>
+</html>
+
+Instructions for Replit:
+
+    Create a new Replit (HTML/CSS/JS template)
+
+    Paste the above code into your index.html
+
+    Upload your logo image and change src="your-logo.png" to match your file name
+
+    Customize sections/pages as needed (About, Download, etc.)
+
+    Adjust the heart colors/sizes or the background as you like
+
+You’re set! This will look clean, professional, and on-brand—ready for you or your designer to build out the rest. Want a React version, more sections, or a full starter pack? Just ask!
