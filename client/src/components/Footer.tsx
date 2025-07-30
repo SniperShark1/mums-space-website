@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <img 
-              src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+              src="/logo.png" 
               alt="Mum's Space Logo" 
               className="h-16 w-auto filter drop-shadow-sm"
             />

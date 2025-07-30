@@ -26,7 +26,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <img 
-              src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+              src="/logo.png" 
               alt="Mum's Space Logo" 
               className="h-12 w-auto filter drop-shadow-sm"
             />

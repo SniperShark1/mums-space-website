@@ -71,7 +71,7 @@ const Home = () => {
               <HeartBackground />
               <div className="w-64 md:w-80 h-auto mx-auto relative z-10">
                 <img 
-                  src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+                  src="/logo.png" 
                   alt="Mum's Space Logo - Mother and baby in heart shape" 
                   className="w-full h-auto filter drop-shadow-lg"
                 />
