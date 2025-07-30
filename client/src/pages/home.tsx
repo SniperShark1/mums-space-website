@@ -443,7 +443,7 @@ const Home = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 flex items-center">
                   <Lock className="mr-3 w-6 h-6" />
-                  Privacy & Data Protection — ID Verification
+                  Privacy & Data Protection — ID Verification (For Mum's Space Website)
                 </h3>
                 <div className="bg-white bg-opacity-50 rounded-xl p-6">
                   <div className="space-y-6">
