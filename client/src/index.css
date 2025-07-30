@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(352, 52%, 92%);
+  --background: #f6cbcd;
   --foreground: hsl(339, 52%, 25%);
   --muted: hsl(352, 30%, 95%);
   --muted-foreground: hsl(339, 20%, 40%);
@@ -25,7 +25,7 @@
   --radius: 0.5rem;
   
   /* Custom Mum's Space colors */
-  --mums-pink: hsl(352, 52%, 92%);
+  --mums-pink: #f6cbcd;
   --mums-dark: hsl(339, 52%, 25%);
   --mums-accent: hsl(342, 69%, 66%);
   --mums-light: hsl(352, 80%, 97%);
@@ -61,7 +61,7 @@
 
   body {
     @apply font-bodoni antialiased text-foreground;
-    background-color: var(--mums-pink);
+    background-color: #f6cbcd;
     min-height: 100vh;
   }
 }
@@ -80,7 +80,7 @@
   }
   
   .bg-mums-pink {
-    background-color: var(--mums-pink);
+    background-color: #f6cbcd;
   }
   
   .bg-mums-accent {
