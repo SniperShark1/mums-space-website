@@ -456,34 +456,34 @@ const Home = () => {
 
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">How is your information used?</h4>
-                      <ul className="space-y-2 text-gray-700">
-                        <li>• Your ID and selfie are used only to confirm your identity and eligibility for our community.</li>
-                        <li>• Your information is not used for any other purpose and is never shared with third parties.</li>
+                      <ul className="ml-6 space-y-1 text-gray-700">
+                        <li>Your ID and selfie are used only to confirm your identity and eligibility for our community.</li>
+                        <li>Your information is not used for any other purpose and is never shared with third parties.</li>
                       </ul>
                     </div>
 
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">How is your information stored?</h4>
-                      <ul className="space-y-2 text-gray-700">
-                        <li>• All ID images are stored securely with access limited to our verification team.</li>
-                        <li>• As soon as your verification is complete, your ID and selfie are permanently deleted from our system.</li>
+                      <ul className="ml-6 space-y-1 text-gray-700">
+                        <li>All ID images are stored securely with access limited to our verification team.</li>
+                        <li>As soon as your verification is complete, your ID and selfie are permanently deleted from our system.</li>
                       </ul>
                     </div>
 
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">How long do we keep your ID?</h4>
-                      <ul className="space-y-2 text-gray-700">
-                        <li>• We keep your ID images only as long as necessary to review and verify your account.</li>
-                        <li>• Once verification is done, all copies of your ID are deleted.</li>
-                        <li>• We never keep your ID on file after this.</li>
+                      <ul className="ml-6 space-y-1 text-gray-700">
+                        <li>We keep your ID images only as long as necessary to review and verify your account.</li>
+                        <li>Once verification is done, all copies of your ID are deleted.</li>
+                        <li>We never keep your ID on file after this.</li>
                       </ul>
                     </div>
 
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">Your rights:</h4>
-                      <ul className="space-y-2 text-gray-700">
-                        <li>• You can request to see, update, or delete your data at any time by contacting our support team.</li>
-                        <li>• For more information, see our full Privacy Policy or email us at support@mumsspace.com.</li>
+                      <ul className="ml-6 space-y-1 text-gray-700">
+                        <li>You can request to see, update, or delete your data at any time by contacting our support team.</li>
+                        <li>For more information, see our full Privacy Policy or email us at support@mumsspace.com.</li>
                       </ul>
                     </div>
 
