@@ -25,10 +25,11 @@ const Navigation = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <div className="w-auto h-10 bg-mums-accent rounded-lg px-4 py-2 flex items-center">
-              <span className="text-white font-semibold text-lg">Mum's Space</span>
-              <span className="text-white ml-2">❤️</span>
-            </div>
+            <img 
+              src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+              alt="Mum's Space Logo" 
+              className="h-12 w-auto filter drop-shadow-sm"
+            />
           </div>
           
           {/* Desktop Navigation */}

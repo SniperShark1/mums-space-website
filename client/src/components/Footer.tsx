@@ -10,9 +10,12 @@ const Footer = () => {
     <footer className="bg-white bg-opacity-90 backdrop-blur-md py-12 mt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="w-auto h-12 bg-mums-accent rounded-lg px-6 py-3 flex items-center justify-center mx-auto mb-6">
-            <span className="text-white font-semibold text-xl">Mum's Space</span>
-            <span className="text-white ml-2">❤️</span>
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+              alt="Mum's Space Logo" 
+              className="h-16 w-auto filter drop-shadow-sm"
+            />
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 mb-6">

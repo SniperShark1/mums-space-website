@@ -69,9 +69,12 @@ const Home = () => {
           <div className="text-center mb-12">
             <div className="relative inline-block">
               <HeartBackground />
-              <div className="w-64 md:w-80 h-auto mx-auto relative z-10 bg-mums-accent rounded-2xl p-8">
-                <h1 className="text-white font-bold text-3xl md:text-4xl mb-2">Mum's Space</h1>
-                <span className="text-white text-2xl">❤️</span>
+              <div className="w-64 md:w-80 h-auto mx-auto relative z-10">
+                <img 
+                  src="/attached_assets/72b98ebe-ea7e-40bf-bb1e-212267c702b1_1753867544695.png" 
+                  alt="Mum's Space Logo - Mother and baby in heart shape" 
+                  className="w-full h-auto filter drop-shadow-lg"
+                />
               </div>
             </div>
           </div>
