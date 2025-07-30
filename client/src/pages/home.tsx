@@ -85,10 +85,10 @@ const Home = () => {
             <p className="text-lg md:text-xl mb-8 leading-relaxed">The private support space for mums and women—by mums, for mums. Connect, share, and find your community in a safe, supportive environment.</p>
             
             <Button 
-              onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('app-features')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-mums-accent hover:bg-mums-dark text-white font-semibold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Download / Join Today
+              Explore What's Inside
             </Button>
             
             <div className="mt-8 p-4 bg-mums-light bg-opacity-50 rounded-2xl">
@@ -100,83 +100,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Download Section */}
-      <section id="download" className="py-16">
+      {/* App Features Section - Placeholder for upcoming showcase */}
+      <section id="app-features" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Download the App</h2>
-            
-            {/* Download Options */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* iPhone */}
-              <div className="text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
-                <div className="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
-                  <Smartphone className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">iPhone</h3>
-                <p className="text-sm mb-4 text-gray-600">Download from the App Store</p>
-                <Button 
-                  onClick={() => handleDownload('iOS')}
-                  className="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors"
-                >
-                  Download for iOS
-                </Button>
-              </div>
-
-              {/* Android */}
-              <div className="text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
-                <div className="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
-                  <Download className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Android</h3>
-                <p className="text-sm mb-4 text-gray-600">Get it on Google Play</p>
-                <Button 
-                  onClick={() => handleDownload('Android')}
-                  className="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors"
-                >
-                  Download for Android
-                </Button>
-              </div>
-
-              {/* PC */}
-              <div className="text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
-                <div className="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
-                  <Monitor className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">PC/Desktop</h3>
-                <p className="text-sm mb-4 text-gray-600">Windows & Mac compatible</p>
-                <Button 
-                  onClick={() => handleDownload('PC')}
-                  className="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors"
-                >
-                  Download for PC
-                </Button>
-              </div>
-            </div>
-
-            {/* Installation Instructions */}
-            <div className="mt-12 p-6 bg-mums-light bg-opacity-50 rounded-2xl">
-              <h4 className="text-lg font-semibold mb-4">Installation Instructions:</h4>
-              <div className="grid md:grid-cols-2 gap-6 text-sm">
-                <div>
-                  <h5 className="font-medium mb-2">Mobile (iOS/Android):</h5>
-                  <ol className="list-decimal list-inside space-y-1 text-gray-700">
-                    <li>Click your platform's download button</li>
-                    <li>You'll be redirected to the app store</li>
-                    <li>Tap "Install" or "Get"</li>
-                    <li>Open the app and create your account</li>
-                  </ol>
-                </div>
-                <div>
-                  <h5 className="font-medium mb-2">Desktop:</h5>
-                  <ol className="list-decimal list-inside space-y-1 text-gray-700">
-                    <li>Click "Download for PC"</li>
-                    <li>Run the downloaded installer</li>
-                    <li>Follow the setup wizard</li>
-                    <li>Launch and sign up</li>
-                  </ol>
-                </div>
-              </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">What's Inside Mum's Space</h2>
+            <div className="text-center py-12">
+              <p className="text-lg text-gray-600 mb-4">Coming soon...</p>
+              <p className="text-sm text-gray-500">We're preparing something special to show you what makes our community unique.</p>
             </div>
           </Card>
         </div>
