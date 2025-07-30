@@ -100,14 +100,113 @@ const Home = () => {
         </div>
       </section>
 
-      {/* App Features Section - Placeholder for upcoming showcase */}
+      {/* App Features Section - Chatroom Showcase */}
       <section id="app-features" className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">What's Inside Mum's Space</h2>
-            <div className="text-center py-12">
-              <p className="text-lg text-gray-600 mb-4">Coming soon...</p>
-              <p className="text-sm text-gray-500">We're preparing something special to show you what makes our community unique.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">What We Offer: Real Chatrooms for Every Mum</h2>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              {/* Chatroom Screenshot */}
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="/chatroom-screenshot.png" 
+                  alt="Mum's Space Chatroom Interface showing active conversations" 
+                  className="w-full h-auto rounded-2xl shadow-lg border border-mums-accent border-opacity-20"
+                />
+              </div>
+              
+              {/* Description */}
+              <div className="order-1 lg:order-2">
+                <p className="text-lg mb-8 leading-relaxed text-gray-700">
+                  At Mum's Space, you'll find dedicated chatrooms for every stage of your journey:
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Heart className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-mums-dark mb-2">Mums to Be</h4>
+                      <p className="text-gray-600 text-sm">Connect with other expecting mums, ask questions, and share your excitement (and worries!) in a private space.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-mums-dark mb-2">0–1 Years</h4>
+                      <p className="text-gray-600 text-sm">Get instant support from mums going through sleepless nights, teething, and those amazing first milestones.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-mums-dark mb-2">2–5 Years</h4>
+                      <p className="text-gray-600 text-sm">Share tips, triumphs, and challenges with other mums of toddlers and preschoolers.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 p-4 bg-mums-light bg-opacity-50 rounded-xl">
+                  <p className="text-sm font-medium text-mums-dark">
+                    No matter your child's age or your parenting journey, there's a chatroom just for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* What Makes It Special */}
+            <div className="mt-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-mums-dark">What Makes Mum's Space Chatroom Special?</h3>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                    <Lock className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Private & Safe</h4>
+                  <p className="text-sm text-gray-600">Only mums and women can join—no outsiders, no judgment.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                    <Smartphone className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Easy to Use</h4>
+                  <p className="text-sm text-gray-600">Clean, inviting design with big, soft buttons and welcoming colors.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Real Community</h4>
+                  <p className="text-sm text-gray-600">Every chatroom is filled with mums just like you—ready to listen, help, and celebrate.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Group Support</h4>
+                  <p className="text-sm text-gray-600">Create your own group for more focused conversations (playgroups, single mums, special needs, and more).</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl md:col-span-2 lg:col-span-1">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Fun & Expressive</h4>
+                  <p className="text-sm text-gray-600">Emojis and nicknames keep things light and personal.</p>
+                </div>
+              </div>
             </div>
           </Card>
         </div>
