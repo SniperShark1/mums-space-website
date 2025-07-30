@@ -655,16 +655,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Contact for Policies */}
-            <div className="mt-8 text-center p-6 bg-mums-accent bg-opacity-10 rounded-2xl">
-              <p className="text-sm">
-                Questions about our policies? Contact us at{" "}
-                <a href="mailto:policies@mumsspace.com" className="text-mums-accent font-medium hover:underline">
-                  policies@mumsspace.com
-                </a>
-              </p>
-              <p className="text-xs text-gray-600 mt-2">Last updated: January 2024</p>
-            </div>
+
           </Card>
         </div>
       </section>
