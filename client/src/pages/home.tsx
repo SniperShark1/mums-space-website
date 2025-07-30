@@ -221,8 +221,8 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="Women supporting each other in a warm, caring environment" 
+                  src="/about-image.png" 
+                  alt="Mother and baby sharing a tender moment" 
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
               </div>
