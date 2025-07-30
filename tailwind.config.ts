@@ -5,6 +5,11 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'bodoni': ['Bodoni Moda', 'serif'],
+        'sans': ['Bodoni Moda', 'serif'],
+        'serif': ['Bodoni Moda', 'serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

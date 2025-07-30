@@ -64,6 +64,27 @@
     background-color: #f6cbcd;
     min-height: 100vh;
   }
+  
+  /* Apply Bodoni Moda font and justified text to all text elements */
+  h1, h2, h3, h4, h5, h6, p, div, span, li, a, button, label, input, textarea {
+    font-family: 'Bodoni Moda', serif;
+  }
+  
+  /* Text justification for all paragraphs and content text */
+  p, .text-content, .text-justify-content {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+  
+  /* Ensure specific content areas use justified text */
+  .section-content p,
+  .card-content p,
+  .description-text {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
 }
 
 @layer utilities {
