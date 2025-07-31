@@ -32,12 +32,39 @@ const Home = () => {
 
   const totalDownloads = downloadStats?.reduce((sum, stat) => sum + stat.downloadCount, 0) || 0;
 
-  const handleDownload = (platform: string) => {
-    downloadMutation.mutate(platform);
-    toast({
-      title: "Download starting...",
-      description: `${platform} download will be available soon!`,
-    });
+  const handleDownload = async (platform: string) => {
+    // Define file URLs for actual app downloads
+    const fileUrls: { [key: string]: string } = {
+      'iPhone': '/downloads/mums-space-ios.ipa',
+      'Android': '/downloads/mums-space-android.apk', 
+      'PC': '/downloads/mums-space-pc.exe'
+    };
+    
+    const fileUrl = fileUrls[platform];
+    
+    if (fileUrl) {
+      // Increment download counter
+      downloadMutation.mutate(platform);
+      
+      // Start actual file download
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = `mums-space-${platform.toLowerCase()}`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      toast({
+        title: "Download started!",
+        description: `Your ${platform} app is downloading now.`,
+      });
+    } else {
+      toast({
+        title: "Coming soon!",
+        description: `The ${platform} version will be available soon.`,
+        variant: "destructive",
+      });
+    }
   };
 
   return (

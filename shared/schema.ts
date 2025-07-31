@@ -31,6 +31,16 @@ export const downloadStats = pgTable("download_stats", {
   lastUpdated: timestamp("last_updated").defaultNow().notNull(),
 });
 
+export const appFiles = pgTable("app_files", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  platform: varchar("platform", { length: 50 }).notNull(),
+  fileName: text("file_name").notNull(),
+  filePath: text("file_path").notNull(),
+  version: text("version").notNull(),
+  uploadedAt: timestamp("uploaded_at").defaultNow().notNull(),
+  isActive: boolean("is_active").default(true).notNull(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -52,6 +62,14 @@ export const insertDownloadStatsSchema = createInsertSchema(downloadStats).pick(
   downloadCount: true,
 });
 
+export const insertAppFileSchema = createInsertSchema(appFiles).pick({
+  platform: true,
+  fileName: true,
+  filePath: true,
+  version: true,
+  isActive: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertNewsletter = z.infer<typeof insertNewsletterSchema>;
@@ -60,3 +78,5 @@ export type InsertReview = z.infer<typeof insertReviewSchema>;
 export type Review = typeof reviews.$inferSelect;
 export type InsertDownloadStats = z.infer<typeof insertDownloadStatsSchema>;
 export type DownloadStats = typeof downloadStats.$inferSelect;
+export type InsertAppFile = z.infer<typeof insertAppFileSchema>;
+export type AppFile = typeof appFiles.$inferSelect;
