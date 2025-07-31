@@ -33,14 +33,24 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 mb-6">
-            {['home', 'download', 'about', 'library', 'policies'].map((section) => (
-              <button
-                key={section}
-                onClick={() => scrollToSection(section)}
-                className="text-mums-dark hover:text-mums-accent transition-colors capitalize"
-              >
-                {section === 'library' ? 'eBook Library' : section}
-              </button>
+            {['home', 'download', 'about', 'library', 'reviews', 'policies'].map((section) => (
+              section === 'reviews' ? (
+                <a
+                  key={section}
+                  href="/reviews"
+                  className="text-mums-dark hover:text-mums-accent transition-colors capitalize"
+                >
+                  Reviews
+                </a>
+              ) : (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="text-mums-dark hover:text-mums-accent transition-colors capitalize"
+                >
+                  {section === 'library' ? 'eBook Library' : section}
+                </button>
+              )
             ))}
           </div>
           

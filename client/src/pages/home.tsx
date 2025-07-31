@@ -1,4 +1,5 @@
 import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen } from "lucide-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
@@ -6,11 +7,33 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import type { DownloadStats } from "@shared/schema";
 
 const Home = () => {
   const { toast } = useToast();
+  const queryClient = useQueryClient();
+
+  const { data: downloadStats } = useQuery<DownloadStats[]>({
+    queryKey: ['/api/download-stats'],
+  });
+
+  const downloadMutation = useMutation({
+    mutationFn: async (platform: string) => {
+      const response = await fetch(`/api/download/${platform}`, {
+        method: 'POST',
+      });
+      if (!response.ok) throw new Error('Download failed');
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['/api/download-stats'] });
+    },
+  });
+
+  const totalDownloads = downloadStats?.reduce((sum, stat) => sum + stat.downloadCount, 0) || 0;
 
   const handleDownload = (platform: string) => {
+    downloadMutation.mutate(platform);
     toast({
       title: "Download starting...",
       description: `${platform} download will be available soon!`,
@@ -217,6 +240,77 @@ const Home = () => {
                 <h4 className="text-lg font-semibold mb-2">Community</h4>
                 <p className="text-sm text-gray-600">Building genuine connections that last beyond the digital space.</p>
               </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section id="download" className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-mums-dark">Download Mum's Space</h2>
+            
+            {/* Download Counter */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-mums-primary bg-opacity-20 px-6 py-3 rounded-full">
+                <Users className="w-5 h-5 text-mums-accent" />
+                <span className="text-lg font-semibold text-mums-dark">
+                  {totalDownloads.toLocaleString()} women have already joined!
+                </span>
+              </div>
+            </div>
+
+            <div className="text-center mb-12">
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                Get Mum's Space on your preferred device and join our supportive community of mothers. 
+                Available for iPhone, Android, and PC - start connecting today!
+              </p>
+            </div>
+
+            {/* Download Buttons */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+              <Button
+                onClick={() => handleDownload('iPhone')}
+                disabled={downloadMutation.isPending}
+                className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+              >
+                <Smartphone className="w-8 h-8" />
+                <div>
+                  <div className="font-semibold">iPhone</div>
+                  <div className="text-sm opacity-75">iOS App</div>
+                </div>
+              </Button>
+
+              <Button
+                onClick={() => handleDownload('Android')}
+                disabled={downloadMutation.isPending}
+                className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+              >
+                <Smartphone className="w-8 h-8" />
+                <div>
+                  <div className="font-semibold">Android</div>
+                  <div className="text-sm opacity-75">APK Download</div>
+                </div>
+              </Button>
+
+              <Button
+                onClick={() => handleDownload('PC')}
+                disabled={downloadMutation.isPending}
+                className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+              >
+                <Monitor className="w-8 h-8" />
+                <div>
+                  <div className="font-semibold">PC/Mac</div>
+                  <div className="text-sm opacity-75">Desktop App</div>
+                </div>
+              </Button>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-sm text-gray-600">
+                All versions are free to download. Join our growing community of supportive mothers!
+              </p>
             </div>
           </Card>
         </div>

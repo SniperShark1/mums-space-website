@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertNewsletterSchema } from "@shared/schema";
+import { insertNewsletterSchema, insertReviewSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Newsletter signup endpoint
@@ -32,6 +32,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(signups);
     } catch (error) {
       console.error("Get newsletter signups error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
+  // Reviews endpoints
+  app.get("/api/reviews", async (req, res) => {
+    try {
+      const reviews = await storage.getReviews();
+      res.json(reviews);
+    } catch (error) {
+      console.error("Get reviews error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
+  app.post("/api/reviews", async (req, res) => {
+    try {
+      const validatedData = insertReviewSchema.parse(req.body);
+      const review = await storage.addReview(validatedData);
+      res.status(201).json(review);
+    } catch (error) {
+      console.error("Add review error:", error);
+      res.status(400).json({ error: "Invalid review data" });
+    }
+  });
+
+  // Download stats endpoints
+  app.get("/api/download-stats", async (req, res) => {
+    try {
+      const stats = await storage.getDownloadStats();
+      res.json(stats);
+    } catch (error) {
+      console.error("Get download stats error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
+  app.post("/api/download/:platform", async (req, res) => {
+    try {
+      const { platform } = req.params;
+      const stats = await storage.updateDownloadStats(platform);
+      res.json(stats);
+    } catch (error) {
+      console.error("Update download stats error:", error);
       res.status(500).json({ error: "Internal server error" });
     }
   });

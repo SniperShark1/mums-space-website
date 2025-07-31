@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type NewsletterSignup, type InsertNewsletter } from "@shared/schema";
+import { type User, type InsertUser, type NewsletterSignup, type InsertNewsletter, type Review, type InsertReview, type DownloadStats, type InsertDownloadStats } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -10,15 +10,25 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   addNewsletterSignup(newsletter: InsertNewsletter): Promise<NewsletterSignup>;
   getNewsletterSignups(): Promise<NewsletterSignup[]>;
+  getReviews(): Promise<Review[]>;
+  addReview(review: InsertReview): Promise<Review>;
+  getDownloadStats(): Promise<DownloadStats[]>;
+  updateDownloadStats(platform: string): Promise<DownloadStats>;
+  initializeDownloadStats(): Promise<void>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private newsletters: Map<string, NewsletterSignup>;
+  private reviews: Map<string, Review>;
+  private downloadStats: Map<string, DownloadStats>;
 
   constructor() {
     this.users = new Map();
     this.newsletters = new Map();
+    this.reviews = new Map();
+    this.downloadStats = new Map();
+    this.initializeDownloadStats();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -51,6 +61,106 @@ export class MemStorage implements IStorage {
 
   async getNewsletterSignups(): Promise<NewsletterSignup[]> {
     return Array.from(this.newsletters.values());
+  }
+
+  async getReviews(): Promise<Review[]> {
+    return Array.from(this.reviews.values()).sort((a, b) => 
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
+  }
+
+  async addReview(insertReview: InsertReview): Promise<Review> {
+    const id = randomUUID();
+    const review: Review = {
+      ...insertReview,
+      id,
+      createdAt: new Date()
+    };
+    this.reviews.set(id, review);
+    return review;
+  }
+
+  async getDownloadStats(): Promise<DownloadStats[]> {
+    return Array.from(this.downloadStats.values());
+  }
+
+  async updateDownloadStats(platform: string): Promise<DownloadStats> {
+    const existing = this.downloadStats.get(platform);
+    if (existing) {
+      existing.downloadCount += 1;
+      existing.lastUpdated = new Date();
+      this.downloadStats.set(platform, existing);
+      return existing;
+    } else {
+      const stats: DownloadStats = {
+        id: randomUUID(),
+        platform,
+        downloadCount: 1,
+        lastUpdated: new Date()
+      };
+      this.downloadStats.set(platform, stats);
+      return stats;
+    }
+  }
+
+  async initializeDownloadStats(): Promise<void> {
+    const platforms = ['iPhone', 'Android', 'PC'];
+    for (const platform of platforms) {
+      if (!this.downloadStats.has(platform)) {
+        this.downloadStats.set(platform, {
+          id: randomUUID(),
+          platform,
+          downloadCount: Math.floor(Math.random() * 1000) + 500, // Some initial demo numbers
+          lastUpdated: new Date()
+        });
+      }
+    }
+
+    // Add some demo reviews
+    if (this.reviews.size === 0) {
+      const demoReviews = [
+        {
+          userName: "Sarah M.",
+          rating: 5,
+          reviewText: "This app has been a lifesaver! The community is so supportive and understanding. I've made genuine friendships here.",
+          verified: true
+        },
+        {
+          userName: "Emma L.",
+          rating: 5,
+          reviewText: "Finally, a safe space where I can share my parenting struggles without judgment. The eBook library is incredibly helpful too!",
+          verified: true
+        },
+        {
+          userName: "Jessica R.",
+          rating: 4,
+          reviewText: "Great app with wonderful features. The chatrooms are well-moderated and the advice I've received has been invaluable.",
+          verified: true
+        },
+        {
+          userName: "Rachel K.",
+          rating: 5,
+          reviewText: "I love being part of this community. It's amazing to connect with other mums who understand what you're going through.",
+          verified: true
+        },
+        {
+          userName: "Lisa P.",
+          rating: 5,
+          reviewText: "The verification process made me feel secure, and the community guidelines ensure respectful conversations. Highly recommend!",
+          verified: true
+        },
+        {
+          userName: "Amy T.",
+          rating: 4,
+          reviewText: "Wonderful platform for mothers. The eBook collection has helped me so much with various parenting challenges.",
+          verified: true
+        }
+      ];
+
+      for (const demoReview of demoReviews) {
+        await this.addReview(demoReview);
+      }
+    }
   }
 }
 
