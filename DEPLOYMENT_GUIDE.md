@@ -145,11 +145,20 @@ MAX_FILE_SIZE=100MB
 
 ## Security Considerations
 
+- **Password-protected admin area** (`/admin` with 12-character password)
 - **Never expose upload functionality publicly**
 - **Use HTTPS for file downloads**
 - **Validate file types and sizes**
 - **Regular security updates**
 - **Monitor download logs for abuse**
+
+## Admin Access
+
+Your website includes a secure admin panel at `/admin` with:
+- **Default password:** `MumsSpace2024!` (change this after deployment)
+- **Features:** Download statistics, review management, file upload instructions
+- **Security:** Session-based auth, attempt limiting, automatic lockout
+- **Access:** Only you should know this URL and password
 
 ## Cost Breakdown (Monthly)
 
