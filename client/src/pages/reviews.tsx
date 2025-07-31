@@ -168,7 +168,7 @@ const Reviews = () => {
                           {renderStars(review.rating)}
                         </div>
                         <span className="text-sm text-gray-500">
-                          {formatDate(review.createdAt)}
+                          {formatDate(review.createdAt.toString())}
                         </span>
                       </div>
                     </div>
