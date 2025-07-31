@@ -11,7 +11,7 @@ Add a "Write Review" or "Rate App" button in your app's settings, menu, or after
 When users tap the review button, open this URL with their username parameter:
 
 ```
-https://your-website-domain.com/reviews?userName=[USER_ONLINE_NAME]#review-form
+https://your-website-domain.com/submit-review?userName=[USER_ONLINE_NAME]
 ```
 
 **Important:** Replace `[USER_ONLINE_NAME]` with the actual user's online name from your app (e.g., "viplounger")
@@ -24,7 +24,7 @@ import { Linking } from 'react-native';
 
 const openReviewPage = (userName) => {
   const encodedUserName = encodeURIComponent(userName);
-  const reviewUrl = `https://your-website-domain.com/reviews?userName=${encodedUserName}#review-form`;
+  const reviewUrl = `https://your-website-domain.com/submit-review?userName=${encodedUserName}`;
   Linking.openURL(reviewUrl);
 };
 
@@ -38,7 +38,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 void openReviewPage(String userName) async {
   final encodedUserName = Uri.encodeComponent(userName);
-  final url = 'https://your-website-domain.com/reviews?userName=$encodedUserName#review-form';
+  final url = 'https://your-website-domain.com/submit-review?userName=$encodedUserName';
   if (await canLaunch(url)) {
     await launch(url);
   }
@@ -53,7 +53,7 @@ void openReviewPage(String userName) async {
 // Java
 public void openReviewPage(String userName) {
     String encodedUserName = URLEncoder.encode(userName, "UTF-8");
-    String url = "https://your-website-domain.com/reviews?userName=" + encodedUserName + "#review-form";
+    String url = "https://your-website-domain.com/submit-review?userName=" + encodedUserName;
     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
     startActivity(browserIntent);
 }
@@ -61,7 +61,7 @@ public void openReviewPage(String userName) {
 // Kotlin
 fun openReviewPage(userName: String) {
     val encodedUserName = URLEncoder.encode(userName, "UTF-8")
-    val url = "https://your-website-domain.com/reviews?userName=$encodedUserName#review-form"
+    val url = "https://your-website-domain.com/submit-review?userName=$encodedUserName"
     val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     startActivity(browserIntent)
 }
@@ -74,7 +74,7 @@ fun openReviewPage(userName: String) {
 ```swift
 func openReviewPage(userName: String) {
     let encodedUserName = userName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-    let urlString = "https://your-website-domain.com/reviews?userName=\(encodedUserName)#review-form"
+    let urlString = "https://your-website-domain.com/submit-review?userName=\(encodedUserName)"
     if let url = URL(string: urlString) {
         UIApplication.shared.open(url)
     }
@@ -87,8 +87,8 @@ func openReviewPage(userName: String) {
 ### 3. What Happens Next
 
 1. User taps the review button in your app
-2. Their default browser opens to the reviews page with their username pre-filled
-3. The page automatically scrolls to the review form section
+2. Their default browser opens to the secure review submission page
+3. System verifies they came from the app (checks for username parameter)
 4. User can:
    - See their app username already filled in (e.g., "viplounger")
    - Select 1-5 star rating by clicking stars
@@ -97,6 +97,8 @@ func openReviewPage(userName: String) {
 5. Review is automatically marked as "verified" since it came from the app
 6. Review appears immediately on the public reviews page with their online name
 7. User sees a success message
+
+**Security:** If someone tries to access the review form directly without coming from the app, they'll see an "Access Restricted" message and be redirected to view existing reviews only.
 
 ## For Website Admin: Review Management
 
@@ -161,14 +163,14 @@ func openReviewPage(userName: String) {
 You can pre-fill the form by adding URL parameters:
 
 ```
-https://your-website-domain.com/reviews?userName=viplounger&rating=5#review-form
+https://your-website-domain.com/submit-review?userName=viplounger&rating=5
 ```
 
 **Parameters:**
-- `userName`: User's online name from the app (automatically filled and read-only)
+- `userName`: **Required** - User's online name from the app (automatically filled and read-only)
 - `rating`: Optional pre-selected rating (1-5)
 
-This provides a smoother user experience with their identity already confirmed.
+**Important:** The `userName` parameter is required for access. Without it, users will see an access restriction message.
 
 ## Analytics & Monitoring
 
