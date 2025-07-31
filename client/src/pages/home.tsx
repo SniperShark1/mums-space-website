@@ -369,14 +369,14 @@ const Home = () => {
                   <Users className="mr-3 w-6 h-6" />
                   Women-Only Community Policy
                 </h3>
-                <p className="mb-4">Mum's Space is exclusively for women, mothers, and those who identify as women. This policy ensures:</p>
+                <p className="mb-4">Mum's Space is exclusively for women and mothers. This policy ensures:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 ml-6">
                   <li>A safe space for women to share personal experiences</li>
                   <li>Gender-specific discussions about motherhood and women's issues</li>
                   <li>Protection from inappropriate behavior often found in mixed-gender spaces</li>
                   <li>Authentic conversations without fear of judgment</li>
                 </ul>
-                <p className="mt-4 font-medium">By joining, you confirm you identify as a woman and agree to maintain the integrity of our women-only space.</p>
+                <p className="mt-4 font-medium">By joining, you agree to maintain the integrity of our women-only space.</p>
               </div>
 
               {/* Community Guidelines */}
