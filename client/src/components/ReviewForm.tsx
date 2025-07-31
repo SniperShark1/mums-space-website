@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -32,6 +32,25 @@ const ReviewForm = () => {
       reviewText: "",
     },
   });
+
+  // Get username from URL parameters when component loads
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const userNameFromUrl = urlParams.get('userName');
+    const ratingFromUrl = urlParams.get('rating');
+    
+    if (userNameFromUrl) {
+      form.setValue('userName', decodeURIComponent(userNameFromUrl));
+    }
+    
+    if (ratingFromUrl) {
+      const ratingValue = parseInt(ratingFromUrl, 10);
+      if (ratingValue >= 1 && ratingValue <= 5) {
+        setRating(ratingValue);
+        form.setValue('rating', ratingValue);
+      }
+    }
+  }, [form]);
 
   const submitReviewMutation = useMutation({
     mutationFn: async (data: ReviewData) => {
@@ -128,8 +147,9 @@ const ReviewForm = () => {
               <FormLabel>Your Name</FormLabel>
               <FormControl>
                 <Input 
-                  placeholder="Enter your name (e.g., Sarah M.)"
+                  placeholder="Your app username will appear here automatically"
                   className="bg-white bg-opacity-70 border-mums-accent border-opacity-30"
+                  readOnly={!!field.value}
                   {...field} 
                 />
               </FormControl>

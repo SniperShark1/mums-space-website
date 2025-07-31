@@ -8,11 +8,13 @@ Add a "Write Review" or "Rate App" button in your app's settings, menu, or after
 
 ### 2. Button Action - Open Website Review Page
 
-When users tap the review button, open this URL in their default browser:
+When users tap the review button, open this URL with their username parameter:
 
 ```
-https://your-website-domain.com/reviews#review-form
+https://your-website-domain.com/reviews?userName=[USER_ONLINE_NAME]#review-form
 ```
+
+**Important:** Replace `[USER_ONLINE_NAME]` with the actual user's online name from your app (e.g., "viplounger")
 
 **Example implementations:**
 
@@ -20,50 +22,80 @@ https://your-website-domain.com/reviews#review-form
 ```javascript
 import { Linking } from 'react-native';
 
-const openReviewPage = () => {
-  const reviewUrl = 'https://your-website-domain.com/reviews#review-form';
+const openReviewPage = (userName) => {
+  const encodedUserName = encodeURIComponent(userName);
+  const reviewUrl = `https://your-website-domain.com/reviews?userName=${encodedUserName}#review-form`;
   Linking.openURL(reviewUrl);
 };
+
+// Usage example:
+// openReviewPage("viplounger");
 ```
 
 **Flutter:**
 ```dart
 import 'package:url_launcher/url_launcher.dart';
 
-void openReviewPage() async {
-  final url = 'https://your-website-domain.com/reviews#review-form';
+void openReviewPage(String userName) async {
+  final encodedUserName = Uri.encodeComponent(userName);
+  final url = 'https://your-website-domain.com/reviews?userName=$encodedUserName#review-form';
   if (await canLaunch(url)) {
     await launch(url);
   }
 }
+
+// Usage example:
+// openReviewPage("viplounger");
 ```
 
 **Native Android (Java/Kotlin):**
 ```java
-Intent browserIntent = new Intent(Intent.ACTION_VIEW, 
-    Uri.parse("https://your-website-domain.com/reviews#review-form"));
-startActivity(browserIntent);
+// Java
+public void openReviewPage(String userName) {
+    String encodedUserName = URLEncoder.encode(userName, "UTF-8");
+    String url = "https://your-website-domain.com/reviews?userName=" + encodedUserName + "#review-form";
+    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+    startActivity(browserIntent);
+}
+
+// Kotlin
+fun openReviewPage(userName: String) {
+    val encodedUserName = URLEncoder.encode(userName, "UTF-8")
+    val url = "https://your-website-domain.com/reviews?userName=$encodedUserName#review-form"
+    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    startActivity(browserIntent)
+}
+
+// Usage example:
+// openReviewPage("viplounger");
 ```
 
 **Native iOS (Swift):**
 ```swift
-if let url = URL(string: "https://your-website-domain.com/reviews#review-form") {
-    UIApplication.shared.open(url)
+func openReviewPage(userName: String) {
+    let encodedUserName = userName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    let urlString = "https://your-website-domain.com/reviews?userName=\(encodedUserName)#review-form"
+    if let url = URL(string: urlString) {
+        UIApplication.shared.open(url)
+    }
 }
+
+// Usage example:
+// openReviewPage("viplounger")
 ```
 
 ### 3. What Happens Next
 
 1. User taps the review button in your app
-2. Their default browser opens to the reviews page
+2. Their default browser opens to the reviews page with their username pre-filled
 3. The page automatically scrolls to the review form section
 4. User can:
-   - Enter their name (e.g., "Sarah M.")
+   - See their app username already filled in (e.g., "viplounger")
    - Select 1-5 star rating by clicking stars
    - Write their review text
    - Submit the review
 5. Review is automatically marked as "verified" since it came from the app
-6. Review appears immediately on the public reviews page
+6. Review appears immediately on the public reviews page with their online name
 7. User sees a success message
 
 ## For Website Admin: Review Management
@@ -83,7 +115,7 @@ if let url = URL(string: "https://your-website-domain.com/reviews#review-form") 
 ### Review Data Structure
 ```json
 {
-  "userName": "Sarah M.",
+  "userName": "viplounger",
   "rating": 5,
   "reviewText": "This app has been amazing for connecting with other mums!",
   "verified": true
@@ -99,7 +131,7 @@ if let url = URL(string: "https://your-website-domain.com/reviews#review-form") 
 4. **Optional**: Make it clear that reviewing is optional and appreciated
 
 ### For Review Quality
-1. **Authentic Names**: Encourage users to use real names with last initial (Sarah M.)
+1. **Authentic Usernames**: User's app username automatically carries over (e.g., "viplounger")
 2. **Helpful Content**: Guide users to write helpful, specific reviews
 3. **Positive Focus**: Reviews should highlight what users love about the app
 4. **Community Impact**: Emphasize how reviews help other mothers find the community
@@ -129,10 +161,14 @@ if let url = URL(string: "https://your-website-domain.com/reviews#review-form") 
 You can pre-fill the form by adding URL parameters:
 
 ```
-https://your-website-domain.com/reviews?userName=Sarah%20M.&rating=5#review-form
+https://your-website-domain.com/reviews?userName=viplounger&rating=5#review-form
 ```
 
-This would pre-populate the name field and star rating for a smoother user experience.
+**Parameters:**
+- `userName`: User's online name from the app (automatically filled and read-only)
+- `rating`: Optional pre-selected rating (1-5)
+
+This provides a smoother user experience with their identity already confirmed.
 
 ## Analytics & Monitoring
 
