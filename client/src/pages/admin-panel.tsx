@@ -36,6 +36,11 @@ const AdminPanel = () => {
             <p className="text-xl text-gray-700">
               Manage your Mum's Space website and monitor app statistics
             </p>
+            <div className="mt-4 p-4 bg-green-100 border border-green-200 rounded-lg max-w-2xl mx-auto">
+              <p className="text-sm text-green-800">
+                <strong>✓ Secure Access:</strong> Only you can see this admin area. Regular website visitors cannot access this page without the password.
+              </p>
+            </div>
           </div>
 
           {/* Stats Overview */}

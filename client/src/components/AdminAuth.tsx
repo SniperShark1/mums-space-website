@@ -105,7 +105,15 @@ const AdminAuth: React.FC<AdminAuthProps> = ({
   if (isAuthenticated) {
     return (
       <div>
-        <div className="fixed top-4 right-4 z-50">
+        <div className="fixed top-4 right-4 z-50 flex gap-2">
+          <Button
+            onClick={() => window.location.href = '/'}
+            variant="outline"
+            size="sm"
+            className="bg-blue-500 hover:bg-blue-600 text-white border-blue-500"
+          >
+            View Website
+          </Button>
           <Button
             onClick={handleLogout}
             variant="outline"
