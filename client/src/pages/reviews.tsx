@@ -134,6 +134,35 @@ const Reviews = () => {
 
 
 
+      {/* Review Information Section */}
+      <section className="pb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="section-card p-6 bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-mums-accent">
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-mums-dark mb-3">Want to Write a Review?</h3>
+              <p className="text-gray-700 mb-4">
+                Only users of the Mum's Space app can write reviews. If you want to share your experience:
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <span className="text-sm font-medium text-gray-600">1. Download the app</span>
+                <span className="hidden sm:inline text-gray-400">→</span>
+                <span className="text-sm font-medium text-gray-600">2. Use it for a few days</span>
+                <span className="hidden sm:inline text-gray-400">→</span>
+                <span className="text-sm font-medium text-gray-600">3. Write your review from within the app</span>
+              </div>
+              <div className="mt-4">
+                <a 
+                  href="/#download" 
+                  className="inline-flex items-center px-6 py-2 bg-mums-accent hover:bg-mums-dark text-white font-semibold rounded-full transition-colors"
+                >
+                  Download Mum's Space Now
+                </a>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

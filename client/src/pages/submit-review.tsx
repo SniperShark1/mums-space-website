@@ -31,14 +31,27 @@ const SubmitReview = () => {
               <h2 className="text-2xl font-semibold text-mums-dark mb-4">Access Restricted</h2>
               <p className="text-gray-700 mb-6">
                 This review form is only accessible through the Mum's Space app. 
-                Please open the app and use the "Write Review" button to submit your review.
+                To write a review, you need to:
               </p>
-              <a 
-                href="/reviews" 
-                className="inline-block bg-mums-accent hover:bg-mums-dark text-white font-semibold py-3 px-6 rounded-xl transition-colors"
-              >
-                View Existing Reviews
-              </a>
+              <div className="text-left mb-6 space-y-2">
+                <p className="text-gray-600">1. Download and install the Mum's Space app</p>
+                <p className="text-gray-600">2. Use the app for a few days to experience our community</p>
+                <p className="text-gray-600">3. Open the app and use the "Write Review" button</p>
+              </div>
+              <div className="space-y-3">
+                <a 
+                  href="/#download" 
+                  className="inline-block bg-mums-accent hover:bg-mums-dark text-white font-semibold py-3 px-6 rounded-xl transition-colors mr-4"
+                >
+                  Download the App
+                </a>
+                <a 
+                  href="/reviews" 
+                  className="inline-block bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                >
+                  View Existing Reviews
+                </a>
+              </div>
             </Card>
           </div>
         </section>
