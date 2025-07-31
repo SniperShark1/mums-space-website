@@ -1,8 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { Star, CheckCircle, Users } from "lucide-react";
+import { Star, CheckCircle, Users, MessageSquare } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
+import ReviewCard from "@/components/ReviewCard";
 import { Card } from "@/components/ui/card";
 import type { Review, DownloadStats } from "@shared/schema";
 
@@ -180,35 +181,9 @@ const Reviews = () => {
               ))}
             </div>
           ) : reviews && reviews.length > 0 ? (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-6">
               {reviews.map((review) => (
-                <Card key={review.id} className="section-card p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <h4 className="font-semibold text-mums-dark">{review.userName}</h4>
-                        {review.verified && (
-                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">
-                            <CheckCircle className="w-3 h-3 mr-1" />
-                            Verified
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="flex">
-                          {renderStars(review.rating)}
-                        </div>
-                        <span className="text-sm text-gray-500">
-                          {formatDate(review.createdAt.toString())}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-700 leading-relaxed">
-                    {review.reviewText}
-                  </p>
-                </Card>
+                <ReviewCard key={review.id} review={review} isAdmin={false} />
               ))}
             </div>
           ) : (

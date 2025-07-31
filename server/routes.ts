@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertNewsletterSchema, insertReviewSchema } from "@shared/schema";
+import { insertNewsletterSchema, insertReviewSchema, adminReplySchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Newsletter signup endpoint
@@ -55,6 +55,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Add review error:", error);
       res.status(400).json({ error: "Invalid review data" });
+    }
+  });
+
+  // Admin reply to review endpoint
+  app.post("/api/reviews/reply", async (req, res) => {
+    try {
+      const validatedData = adminReplySchema.parse(req.body);
+      const updatedReview = await storage.addAdminReply(validatedData.reviewId, validatedData.adminReply);
+      res.json(updatedReview);
+    } catch (error) {
+      console.error("Add admin reply error:", error);
+      res.status(400).json({ error: "Invalid reply data" });
     }
   });
 

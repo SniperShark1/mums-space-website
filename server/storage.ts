@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type NewsletterSignup, type InsertNewsletter, type Review, type InsertReview, type DownloadStats, type InsertDownloadStats } from "@shared/schema";
+import { type User, type InsertUser, type NewsletterSignup, type InsertNewsletter, type Review, type InsertReview, type DownloadStats, type InsertDownloadStats, type AdminReply } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -12,6 +12,7 @@ export interface IStorage {
   getNewsletterSignups(): Promise<NewsletterSignup[]>;
   getReviews(): Promise<Review[]>;
   addReview(review: InsertReview): Promise<Review>;
+  addAdminReply(reviewId: string, adminReply: string): Promise<Review>;
   getDownloadStats(): Promise<DownloadStats[]>;
   updateDownloadStats(platform: string): Promise<DownloadStats>;
   initializeDownloadStats(): Promise<void>;
@@ -73,11 +74,30 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const review: Review = {
       ...insertReview,
+      verified: insertReview.verified ?? false,
       id,
-      createdAt: new Date()
+      createdAt: new Date(),
+      adminReply: null,
+      adminReplyAt: null
     };
     this.reviews.set(id, review);
     return review;
+  }
+
+  async addAdminReply(reviewId: string, adminReply: string): Promise<Review> {
+    const review = this.reviews.get(reviewId);
+    if (!review) {
+      throw new Error('Review not found');
+    }
+    
+    const updatedReview: Review = {
+      ...review,
+      adminReply,
+      adminReplyAt: new Date()
+    };
+    
+    this.reviews.set(reviewId, updatedReview);
+    return updatedReview;
   }
 
   async getDownloadStats(): Promise<DownloadStats[]> {

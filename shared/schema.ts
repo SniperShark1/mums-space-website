@@ -22,6 +22,8 @@ export const reviews = pgTable("reviews", {
   reviewText: text("review_text").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   verified: boolean("verified").default(false).notNull(),
+  adminReply: text("admin_reply"),
+  adminReplyAt: timestamp("admin_reply_at"),
 });
 
 export const downloadStats = pgTable("download_stats", {
@@ -57,6 +59,11 @@ export const insertReviewSchema = createInsertSchema(reviews).pick({
   verified: true,
 });
 
+export const adminReplySchema = z.object({
+  reviewId: z.string(),
+  adminReply: z.string().min(1, "Reply cannot be empty"),
+});
+
 export const insertDownloadStatsSchema = createInsertSchema(downloadStats).pick({
   platform: true,
   downloadCount: true,
@@ -76,6 +83,7 @@ export type InsertNewsletter = z.infer<typeof insertNewsletterSchema>;
 export type NewsletterSignup = typeof newsletterSignups.$inferSelect;
 export type InsertReview = z.infer<typeof insertReviewSchema>;
 export type Review = typeof reviews.$inferSelect;
+export type AdminReply = z.infer<typeof adminReplySchema>;
 export type InsertDownloadStats = z.infer<typeof insertDownloadStatsSchema>;
 export type DownloadStats = typeof downloadStats.$inferSelect;
 export type InsertAppFile = z.infer<typeof insertAppFileSchema>;

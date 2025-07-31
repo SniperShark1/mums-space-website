@@ -11,6 +11,7 @@ import {
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AdminAuth from "@/components/AdminAuth";
+import ReviewCard from "@/components/ReviewCard";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { Review, DownloadStats } from "@shared/schema";
@@ -185,45 +186,30 @@ const AdminPanel = () => {
           {/* Recent Reviews */}
           <Card className="section-card p-8">
             <h2 className="text-2xl font-semibold text-mums-dark mb-6">
-              Recent Reviews
+              Reviews Management
             </h2>
+            <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800">
+                <strong>Admin Features:</strong> You can reply to reviews below. Your replies will be visible to all website visitors on the reviews page.
+              </p>
+            </div>
 
             {reviews && reviews.length > 0 ? (
-              <div className="space-y-4">
-                {reviews.slice(0, 5).map((review) => (
-                  <div
-                    key={review.id}
-                    className="bg-white p-4 rounded-lg border flex justify-between items-start"
-                  >
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="font-semibold">{review.userName}</span>
-                        <div className="flex">
-                          {Array.from({ length: review.rating }).map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-700">
-                        {review.reviewText}
-                      </p>
-                    </div>
-                    <span className="text-xs text-gray-500 ml-4">
-                      {new Date(review.createdAt).toLocaleDateString()}
-                    </span>
-                  </div>
+              <div className="space-y-6">
+                {reviews.slice(0, 10).map((review) => (
+                  <ReviewCard key={review.id} review={review} isAdmin={true} />
                 ))}
 
-                {reviews.length > 5 && (
+                {reviews.length > 10 && (
                   <div className="text-center pt-4">
+                    <p className="text-gray-600 mb-4">
+                      Showing first 10 reviews. Total: {reviews.length} reviews.
+                    </p>
                     <Button
                       variant="outline"
                       onClick={() => (window.location.href = "/reviews")}
                     >
-                      View All Reviews
+                      View All Reviews on Public Page
                     </Button>
                   </div>
                 )}
