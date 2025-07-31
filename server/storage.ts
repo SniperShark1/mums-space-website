@@ -124,7 +124,7 @@ export class MemStorage implements IStorage {
           rating: 5,
           reviewText: "This app has been a lifesaver! The community is so supportive and understanding. I've made genuine friendships here.",
           verified: true
-        } as InsertReview,
+        },
         {
           userName: "Emma L.",
           rating: 5,
@@ -158,7 +158,7 @@ export class MemStorage implements IStorage {
       ];
 
       for (const demoReview of demoReviews) {
-        await this.addReview(demoReview);
+        await this.addReview(demoReview as InsertReview);
       }
     }
   }

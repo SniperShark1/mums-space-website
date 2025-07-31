@@ -3,7 +3,9 @@ import { Star, CheckCircle, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
+import ReviewForm from "@/components/ReviewForm";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import type { Review, DownloadStats } from "@shared/schema";
 
 const Reviews = () => {
@@ -129,6 +131,36 @@ const Reviews = () => {
               </div>
             </Card>
           )}
+        </div>
+      </section>
+
+      {/* Add Review Section for App Users */}
+      <section className="pb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="section-card p-8 bg-gradient-to-r from-mums-primary to-mums-accent text-white">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4">Share Your Experience</h3>
+              <p className="text-lg mb-6 opacity-90">
+                Have you used Mum's Space? Your review helps other mothers discover our community!
+              </p>
+              <Button
+                onClick={() => window.location.href = '/reviews#review-form'}
+                className="bg-white text-mums-accent hover:bg-gray-100 font-semibold py-3 px-8 rounded-full"
+              >
+                Write a Review
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Review Form Section */}
+      <section id="review-form" className="pb-8">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="section-card p-8">
+            <h3 className="text-2xl font-semibold text-mums-dark mb-6 text-center">Write Your Review</h3>
+            <ReviewForm />
+          </Card>
         </div>
       </section>
 
