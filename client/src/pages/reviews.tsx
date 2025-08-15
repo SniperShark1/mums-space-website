@@ -70,36 +70,38 @@ const Reviews = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="section-card p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-mums-dark mb-2">
-                {totalDownloads.toLocaleString()}
-              </h3>
-              <p className="text-gray-600">Total Downloads</p>
-            </Card>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="section-card p-8 text-center shadow-lg">
+                <div className="w-20 h-20 mx-auto mb-6 bg-mums-accent rounded-full flex items-center justify-center">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-4xl font-bold text-mums-dark mb-3">
+                  {totalDownloads.toLocaleString()}
+                </h3>
+                <p className="text-gray-600 font-medium">Total Downloads</p>
+              </Card>
 
-            <Card className="section-card p-6 text-center">
-              <div className="flex justify-center mb-4">
-                {renderStars(Math.round(Number(averageRating)))}
-              </div>
-              <h3 className="text-2xl font-bold text-mums-dark mb-2">
-                {averageRating}
-              </h3>
-              <p className="text-gray-600">Average Rating</p>
-            </Card>
+              <Card className="section-card p-8 text-center shadow-lg">
+                <div className="flex justify-center mb-6">
+                  {renderStars(Math.round(Number(averageRating)))}
+                </div>
+                <h3 className="text-4xl font-bold text-mums-dark mb-3">
+                  {averageRating}
+                </h3>
+                <p className="text-gray-600 font-medium">Average Rating</p>
+              </Card>
 
-            <Card className="section-card p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-mums-dark mb-2">
-                {reviews?.length || 0}
-              </h3>
-              <p className="text-gray-600">Reviews</p>
-            </Card>
+              <Card className="section-card p-8 text-center shadow-lg">
+                <div className="w-20 h-20 mx-auto mb-6 bg-mums-accent rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-4xl font-bold text-mums-dark mb-3">
+                  {reviews?.length || 0}
+                </h3>
+                <p className="text-gray-600 font-medium">Reviews</p>
+              </Card>
+            </div>
           </div>
 
           {/* Rating Distribution */}
