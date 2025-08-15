@@ -10,6 +10,10 @@ import mealPlannerImage from "@assets/Screenshot_21_1755234508674.png";
 import contractionTrackerImage from "@assets/Screenshot_18_1755234564029.png";
 import feedingTrackerImage from "@assets/Screenshot_20_1755234646909.png";
 import mumsToBeImage from "@assets/Screenshot_23_1755234695724.png";
+import stage01Image from "@assets/Screenshot_22_1755235131834.png";
+import stage25Image from "@assets/Screenshot_24_1755235176114.png";
+import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
+import downloadImage from "@assets/Screenshot_37_1755235284470.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
@@ -505,7 +509,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src="/stage-0-1.webp" 
+                  src={stage01Image} 
                   alt="Newborn care guide with sleep, feeding schedules and milestone tracking" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -525,7 +529,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/stage-2-5.webp" 
+                  src={stage25Image} 
                   alt="Toddler development activities, behavior guidance and preschool preparation" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -537,7 +541,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src="/reviews.webp" 
+                  src={reviewsImage} 
                   alt="Honest reviews and testimonials from mums using the app" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -557,7 +561,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/download.webp" 
+                  src={downloadImage} 
                   alt="Mobile app download screens for iOS and Android platforms" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
