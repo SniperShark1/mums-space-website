@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
 import storiesImage from "@assets/Screenshot_31_1755233840917.png";
 import debatesImage from "@assets/Screenshot_32_1755233328576.png";
+import guidesImage from "@assets/Screenshot_14_1755234349059.png";
+import mealPlannerImage from "@assets/Screenshot_21_1755234508674.png";
+import contractionTrackerImage from "@assets/Screenshot_18_1755234564029.png";
+import feedingTrackerImage from "@assets/Screenshot_20_1755234646909.png";
+import mumsToBeImage from "@assets/Screenshot_23_1755234695724.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
@@ -404,7 +409,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src="/guides.webp" 
+                  src={guidesImage} 
                   alt="Digital library of expert parenting guides and eBooks" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -424,7 +429,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/meal-planner.webp" 
+                  src={mealPlannerImage} 
                   alt="Weekly meal planner with auto-generated shopping lists" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -456,7 +461,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/contraction-tracker.webp" 
+                  src={contractionTrackerImage} 
                   alt="Real-time contraction tracking tool with timing intervals" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -468,7 +473,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src="/feeding-tracker.webp" 
+                  src={feedingTrackerImage} 
                   alt="Baby feeding tracker for breast, bottle and solid food logging" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -488,7 +493,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/mums-to-be.webp" 
+                  src={mumsToBeImage} 
                   alt="Pregnancy tools, topics and community support for expecting mothers" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
