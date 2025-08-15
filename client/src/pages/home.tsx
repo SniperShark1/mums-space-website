@@ -347,108 +347,114 @@ const Home = () => {
       <section id="library" className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Our eBook Library</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Explore Mums Space</h2>
             
             {/* Introduction */}
             <div className="mb-16 text-center">
               <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                Our eBook Library gives you instant access to trusted, expert-written guides for every stage of motherhood. Whether you're preparing for a new baby, raising toddlers, supporting school-aged kids, or looking after yourself as a mum, there's something here for you!
+                Discover all the features inside Mum's Space - from real-time conversations to expert guides, tracking tools, and support for every stage of motherhood.
               </p>
             </div>
 
-            {/* First Image and Explanation */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <img 
-                  src="/ebook-library-1.png" 
-                  alt="eBook Library featuring top shelf books, babies, and toddlers sections" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
-                />
+            {/* App Features Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Stories</h4>
+                <p className="text-sm text-gray-600">Real experiences from mums at every stage.</p>
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Curated Collections for Every Stage</h3>
-                <p className="text-gray-700 mb-4">
-                  Our library is organized into easy-to-navigate sections, starting with our <strong>Top Shelf Book Feature</strong> that spotlights premium, must-read parenting guides like "Premium Parenting Guide", "Elite Baby Care", and "VIP Sleep Solutions."
-                </p>
-                <p className="text-gray-700 mb-4">
-                  For new mums, our <strong>Babies (0–1)</strong> section includes everything you need for your baby's first year: First Foods Guide, Sleep Training Made Easy, and Baby Development Milestones.
-                </p>
-                <p className="text-gray-700">
-                  The <strong>Toddlers (2–5)</strong> collection offers practical strategies for those tricky years, including Potty Training Success, Toddler Nutrition Guide, and Managing Tantrums.
-                </p>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Debates</h4>
+                <p className="text-sm text-gray-600">Vote, comment, and see what the community thinks.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Chatroom</h4>
+                <p className="text-sm text-gray-600">Drop in for live, friendly conversation.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Guides (eBooks)</h4>
+                <p className="text-sm text-gray-600">Short, expert guides you can read anytime.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Tips & Tricks</h4>
+                <p className="text-sm text-gray-600">Quick wins for pregnancy and parenting life.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Contraction Tracker</h4>
+                <p className="text-sm text-gray-600">Track timings and intervals in real time.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Feeding Tracker</h4>
+                <p className="text-sm text-gray-600">Log breast, bottle, and solids with easy history.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Meal Planner</h4>
+                <p className="text-sm text-gray-600">Plan weekly meals and auto-build a shopping list.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Mums-to-be</h4>
+                <p className="text-sm text-gray-600">Pregnancy topics, tools, and support in one place.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">0–1</h4>
+                <p className="text-sm text-gray-600">Newborn to one: sleep, feeding, routines, milestones.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">2–5</h4>
+                <p className="text-sm text-gray-600">Toddlers to preschool: behaviour, play, toilet training.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Reviews</h4>
+                <p className="text-sm text-gray-600">See honest feedback from mums using MumSpace.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Download the App</h4>
+                <p className="text-sm text-gray-600">Install on iOS or Android for faster access.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center md:col-span-2 lg:col-span-1">
+                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Too many to list</h4>
+                <p className="text-sm text-gray-600">Open Explore to browse every section and tool.</p>
               </div>
             </div>
 
-            {/* Second Image and Explanation */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Support for Every Family</h3>
-                <p className="text-gray-700 mb-4">
-                  As your children grow, our <strong>School Age & Teenagers</strong> section provides support with Teen Communication and Homework Help Strategies for those important later years.
-                </p>
-                <p className="text-gray-700 mb-4">
-                  We understand that every family is unique. Our <strong>Disabilities & Neurodivergence</strong> section offers specialized resources including ADHD Parenting Guide and Autism Support Handbook for mums raising neurodivergent children.
-                </p>
-                <p className="text-gray-700">
-                  Most importantly, our <strong>Self Help for Mums</strong> section focuses on your wellbeing with guides like Mindful Motherhood and Mum Self-Care Guide, because looking after you is just as important.
-                </p>
-              </div>
-              <div className="order-1 md:order-2">
-                <img 
-                  src="/ebook-library-2.png" 
-                  alt="eBook Library showing school age, disabilities support, and self help sections" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
-                />
-              </div>
-            </div>
 
-            {/* Third Image and Explanation */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-              <div>
-                <img 
-                  src="/ebook-library-3.png" 
-                  alt="eBook Library featuring empty nest, mums-to-be, and food sections" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Life Transitions & Practical Solutions</h3>
-                <p className="text-gray-700 mb-4">
-                  For life's transitions, our <strong>Empty Nest & Beyond</strong> section supports mums whose children are growing up with guides like "Life After Kids Leave" and "Grandparent's Guide."
-                </p>
-                <p className="text-gray-700 mb-4">
-                  Expecting mums will find everything they need in our <strong>Mums-to-Be</strong> collection, covering Pregnancy Journey and Preparing for Baby with essential resources for welcoming your little one.
-                </p>
-                <p className="text-gray-700">
-                  Our <strong>Food</strong> section makes family meals easier with Healthy Family Meals and Quick Dinner Solutions - perfect for busy families who want nutritious, simple recipes.
-                </p>
-              </div>
-            </div>
 
-            {/* Why Our Library is Different */}
+            {/* Why Mums Space is Special */}
             <div className="bg-mums-primary bg-opacity-20 rounded-2xl p-8 mb-12">
-              <h3 className="text-2xl font-semibold mb-6 text-center text-mums-dark">Why Our Library is Different</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-center text-mums-dark">Why Mums Space is Special</h3>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
                     <Heart className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">Curated for Mums</h4>
-                  <p className="text-sm text-gray-600">Every eBook is handpicked to give real, practical support for mothers and families.</p>
+                  <h4 className="text-lg font-semibold mb-2">All-in-One App</h4>
+                  <p className="text-sm text-gray-600">Everything you need as a mum in one simple, beautiful app.</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">No Upload Fees</h4>
-                  <p className="text-sm text-gray-600">Authors can sell their own eBooks with no upfront fees, just a fair 15% commission on each sale.</p>
+                  <h4 className="text-lg font-semibold mb-2">Real Community</h4>
+                  <p className="text-sm text-gray-600">Connect with other mums going through the same experiences.</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
                     <BookOpen className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">Always Growing</h4>
-                  <p className="text-sm text-gray-600">New guides and topics are added regularly—there's always something new to discover.</p>
+                  <h4 className="text-lg font-semibold mb-2">Expert Guidance</h4>
+                  <p className="text-sm text-gray-600">Trusted guides and tools backed by parenting experts.</p>
                 </div>
               </div>
             </div>
