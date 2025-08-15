@@ -518,7 +518,8 @@ const Home = () => {
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Mums-to-be</h3>
                 <p className="text-gray-600 text-base leading-relaxed mb-4">Pregnancy topics, tools, and support in one place.</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">Navigate your pregnancy journey with confidence using our comprehensive pregnancy toolkit. Track milestones, access specialized content, and connect with other expecting mothers.</p>
-                <p className="text-gray-600 text-sm leading-relaxed">From first trimester symptoms to birth preparation, find everything you need to support a healthy, informed pregnancy experience.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">From first trimester symptoms to birth preparation, find everything you need to support a healthy, informed pregnancy experience.</p>
+                <p className="text-gray-600 text-xs italic leading-relaxed">These are just a few of the options available in our app.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -544,7 +545,8 @@ const Home = () => {
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">0–1</h3>
                 <p className="text-gray-600 text-base leading-relaxed mb-4">Newborn to one: sleep, feeding, routines, milestones.</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">Navigate the crucial first year with specialized content for newborns to one-year-olds. Access baby recipes, establish routines, and track important developmental milestones.</p>
-                <p className="text-gray-600 text-sm leading-relaxed">Connect with other new mums, share experiences, and get support during this incredible but challenging first year of parenthood.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Connect with other new mums, share experiences, and get support during this incredible but challenging first year of parenthood.</p>
+                <p className="text-gray-600 text-xs italic leading-relaxed">These are just a few of the options available in our app.</p>
               </div>
             </div>
 
@@ -554,7 +556,8 @@ const Home = () => {
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">2–5</h3>
                 <p className="text-gray-600 text-base leading-relaxed mb-4">Toddlers to preschool: behaviour, play, toilet training.</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">Support your growing child through the toddler and preschool years. Access specialized tools for behavior management, developmental activities, and important milestones like toilet training.</p>
-                <p className="text-gray-600 text-sm leading-relaxed">Find age-appropriate guidance, connect with other parents of similar-aged children, and navigate this exciting stage of growth and learning together.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Find age-appropriate guidance, connect with other parents of similar-aged children, and navigate this exciting stage of growth and learning together.</p>
+                <p className="text-gray-600 text-xs italic leading-relaxed">These are just a few of the options available in our app.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
