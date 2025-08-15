@@ -132,7 +132,7 @@ const Home = () => {
               {/* Chatroom Screenshot */}
               <div className="order-2 lg:order-1">
                 <img 
-                  src="/chatroom-screenshot.png" 
+                  src="/chatroom.webp" 
                   alt="Mum's Space Chatroom Interface showing active conversations" 
                   className="w-full h-auto rounded-2xl shadow-lg border border-mums-accent border-opacity-20"
                 />
