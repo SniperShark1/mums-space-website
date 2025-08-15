@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
-import storiesImage from "@assets/Screenshot_31_1755233077629.png";
+import storiesImage from "@assets/Screenshot_31_1755233840917.png";
 import debatesImage from "@assets/Screenshot_32_1755233328576.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
@@ -392,9 +392,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/chatroom-screenshot.png" 
-                  alt="Chatroom interface for live conversations" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/chatroom.webp" 
+                  alt="Live chatroom with ongoing conversations between mums" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -407,9 +408,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/ebook-library-main.png" 
-                  alt="eBook library with expert guides" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/guides.webp" 
+                  alt="Digital library of expert parenting guides and eBooks" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -422,9 +424,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/meal-planner.png" 
-                  alt="Meal planner showing weekly organization" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/meal-planner.webp" 
+                  alt="Weekly meal planner with auto-generated shopping lists" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -437,9 +440,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/stories-main.png" 
-                  alt="Tips and tricks for parenting" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/tips.webp" 
+                  alt="Quick parenting tips and practical advice for daily challenges" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -452,9 +456,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/debates-screenshot.png" 
-                  alt="Contraction tracker interface" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/contraction-tracker.webp" 
+                  alt="Real-time contraction tracking tool with timing intervals" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -467,9 +472,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/chatroom-screenshot.png" 
-                  alt="Feeding tracker interface" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/feeding-tracker.webp" 
+                  alt="Baby feeding tracker for breast, bottle and solid food logging" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -482,9 +488,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/ebook-library-main.png" 
-                  alt="Pregnancy support and tools" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/mums-to-be.webp" 
+                  alt="Pregnancy tools, topics and community support for expecting mothers" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -497,9 +504,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/meal-planner.png" 
-                  alt="Newborn care and milestones" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/stage-0-1.webp" 
+                  alt="Newborn care guide with sleep, feeding schedules and milestone tracking" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -512,9 +520,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/stories-main.png" 
-                  alt="Toddler development and activities" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/stage-2-5.webp" 
+                  alt="Toddler development activities, behavior guidance and preschool preparation" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -527,9 +536,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/debates-screenshot.png" 
-                  alt="User reviews and feedback" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/reviews.webp" 
+                  alt="Honest reviews and testimonials from mums using the app" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -542,9 +552,10 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/chatroom-screenshot.png" 
-                  alt="Mobile app download" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/download.webp" 
+                  alt="Mobile app download screens for iOS and Android platforms" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
@@ -555,13 +566,7 @@ const Home = () => {
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Too many to list</h3>
                 <p className="text-gray-700 mb-6">Open Explore to browse every section and tool.</p>
               </div>
-              <div className="order-1 md:order-2">
-                <img 
-                  src="/ebook-library-main.png" 
-                  alt="Complete app features overview" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
-                />
-              </div>
+
             </div>
 
 
