@@ -360,7 +360,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src={storiesImage} 
+                  src="/stories.webp" 
                   alt="Mums sharing pregnancy and parenting stories in community discussions" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
@@ -372,7 +372,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src={debatesImage} 
+                  src="/debates.webp" 
                   alt="Community debates with voting interface and discussion threads" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
