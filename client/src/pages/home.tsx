@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import ImageGallery from "@/components/ImageGallery";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
@@ -489,6 +490,65 @@ const Home = () => {
                   alt="Mum's Space Chatroom Interface showing active conversations" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
+              </div>
+            </div>
+
+            {/* Feature Showcase - eBook Library */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <ImageGallery
+                  triggerImage={{
+                    src: "/ebook-library-main.png",
+                    alt: "eBook Library with Top Shelf features and baby guides",
+                    className: "rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  }}
+                  images={[
+                    {
+                      src: "/ebook-library-main.png",
+                      alt: "eBook Library main interface",
+                      title: "eBook Library - Top Shelf Features & Baby Guides"
+                    },
+                    {
+                      src: "/stories-main.png",
+                      alt: "Stories feature showing pregnancy symptoms discussions",
+                      title: "Stories - Real Mum Experiences (Test Feature)"
+                    },
+                    {
+                      src: "/debates-screenshot.png",
+                      alt: "Debates feature with voting",
+                      title: "Debates - Community Voting"
+                    },
+                    {
+                      src: "/chatroom-screenshot.png",
+                      alt: "Chatroom interface",
+                      title: "Chatrooms - Live Conversations"
+                    }
+                  ]}
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Expert Guides & Resources</h3>
+                <p className="text-gray-700 mb-4">
+                  <strong>eBook Library</strong> provides expert-written guides for every parenting stage. From premium featured content to specialized guides for babies, toddlers, and beyond.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Top Shelf premium parenting guides</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Age-specific collections (0-1, 2-5, etc.)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Subscribe to access all paid content</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Sell your own eBooks to the community</span>
+                  </div>
+                </div>
               </div>
             </div>
 
