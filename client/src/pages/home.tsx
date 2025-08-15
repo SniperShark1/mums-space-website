@@ -351,16 +351,17 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Explore Mums Space</h2>
             
             {/* Section 1: Stories - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid md:grid-cols-[60%_40%] gap-12 items-center mb-16">
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
-                <p className="text-gray-700 mb-6">Real experiences from mums at every stage.</p>
+                <p className="text-gray-700">Real experiences from mums at every stage.</p>
               </div>
               <div>
                 <img 
-                  src="/stories-detailed.png?v=1" 
-                  alt="Stories feature showing pregnancy symptoms discussions" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  src="/stories-final.png" 
+                  alt="Mums sharing stories" 
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
