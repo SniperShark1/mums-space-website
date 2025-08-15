@@ -428,9 +428,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Guides (eBooks)</h3>
-                <p className="text-gray-600 text-base leading-relaxed mb-4">Short, expert guides you can read anytime.</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-3">Access our curated library of expert-written guides covering everything from pregnancy to early childhood. Each guide is designed to be practical and easy to digest.</p>
-                <p className="text-gray-600 text-sm leading-relaxed">Download guides to read offline, bookmark your favorites, and get trusted advice whenever you need it most.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">A marketplace where mums share their knowledge.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Browse and purchase eBooks written by experienced mothers in our community. From parenting tips to personal growth, discover practical guides created by mums who've been there.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Support fellow mothers by purchasing their expertly crafted guides, or share your own knowledge by selling your eBooks to the community.</p>
               </div>
             </div>
 
