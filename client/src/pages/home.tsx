@@ -430,6 +430,68 @@ const Home = () => {
               </div>
             </div>
 
+            {/* Feature Showcase - Debates */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <img 
+                  src="/debates-screenshot.png" 
+                  alt="Mums to Be Debates - Vote and discuss parenting topics" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Join the Conversation</h3>
+                <p className="text-gray-700 mb-4">
+                  <strong>Debates</strong> let you vote on parenting topics and see what other mums think. Whether it's "Dummy or No dummy" or other parenting decisions, get real perspectives from the community.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Vote on active debates</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Share your comments and experiences</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Start new debates on topics you care about</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature Showcase - Chatroom */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Real-Time Support</h3>
+                <p className="text-gray-700 mb-4">
+                  <strong>Chatrooms</strong> provide instant connection with other mums going through similar experiences. Get support, share advice, or just have a friendly chat.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Age-specific chatrooms (Mums-to-be, 0-1, 2-5)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Live conversations with real mums</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Private, women-only community</span>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/chatroom-screenshot.png" 
+                  alt="Mum's Space Chatroom Interface showing active conversations" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
 
 
             {/* Why Mums Space is Special */}
