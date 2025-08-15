@@ -11,7 +11,7 @@ import contractionTrackerImage from "@assets/Screenshot_18_1755234564029.png";
 import feedingTrackerImage from "@assets/Screenshot_20_1755234646909.png";
 import mumsToBeImage from "@assets/mums-to-be-new.png";
 import stage01Image from "@assets/zero-one-new.png";
-import stage25Image from "@assets/two-five-new.png";
+import stage25Image from "@assets/two-five-updated.png";
 import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
 import downloadImage from "@assets/Screenshot_37_1755235284470.png";
 import babyIsHereImage from "@assets/Screenshot_38_1755235350831.png";
