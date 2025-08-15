@@ -357,7 +357,7 @@ const Home = () => {
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
                 <p className="text-gray-700">Real experiences from mums at every stage.</p>
               </div>
-              <div className="pr-4">
+              <div>
                 <img 
                   src={storiesImage} 
                   alt="Mums sharing stories" 
