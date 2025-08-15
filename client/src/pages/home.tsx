@@ -361,8 +361,8 @@ const Home = () => {
               </div>
               <div>
                 <img 
-                  src="/stories-main.png" 
-                  alt="Stories feature showing real mum experiences" 
+                  src="/stories-detailed.png" 
+                  alt="Stories feature showing pregnancy symptoms discussions" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
