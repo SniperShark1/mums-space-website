@@ -355,13 +355,10 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
                 <p className="text-gray-700 mb-6">Real experiences from mums at every stage.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/stories">Explore Stories</a>
-                </Button>
               </div>
               <div>
                 <img 
-                  src="/stories-detailed.png" 
+                  src="/stories-detailed.png?v=1" 
                   alt="Stories feature showing pregnancy symptoms discussions" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
@@ -373,9 +370,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Debates</h3>
                 <p className="text-gray-700 mb-6">Vote, comment, and see what the community thinks.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/debates">Join Debates</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -391,9 +385,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Chatroom</h3>
                 <p className="text-gray-700 mb-6">Drop in for live, friendly conversation.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/chatroom">Enter Chatroom</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -409,9 +400,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Guides (eBooks)</h3>
                 <p className="text-gray-700 mb-6">Short, expert guides you can read anytime.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/guides">Browse Guides</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -427,9 +415,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Meal Planner</h3>
                 <p className="text-gray-700 mb-6">Plan weekly meals and auto-build a shopping list.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/tools/meal-planner">Plan Meals</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -445,9 +430,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Tips & Tricks</h3>
                 <p className="text-gray-700 mb-6">Quick wins for pregnancy and parenting life.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/tips">View Tips</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -463,9 +445,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Contraction Tracker</h3>
                 <p className="text-gray-700 mb-6">Track timings and intervals in real time.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/tools/contraction-tracker">Start Tracking</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -481,9 +460,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Feeding Tracker</h3>
                 <p className="text-gray-700 mb-6">Log breast, bottle, and solids with easy history.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/tools/feeding-tracker">Track Feeding</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -499,9 +475,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Mums-to-be</h3>
                 <p className="text-gray-700 mb-6">Pregnancy topics, tools, and support in one place.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/mums-to-be">Explore Pregnancy</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -517,9 +490,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">0–1</h3>
                 <p className="text-gray-700 mb-6">Newborn to one: sleep, feeding, routines, milestones.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/stage/0-1">Newborn Stage</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -535,9 +505,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">2–5</h3>
                 <p className="text-gray-700 mb-6">Toddlers to preschool: behaviour, play, toilet training.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/stage/2-5">Toddler Stage</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -553,9 +520,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Reviews</h3>
                 <p className="text-gray-700 mb-6">See honest feedback from mums using MumSpace.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/reviews">Read Reviews</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
@@ -571,9 +535,6 @@ const Home = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Download the App</h3>
                 <p className="text-gray-700 mb-6">Install on iOS or Android for faster access.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/download">Download Now</a>
-                </Button>
               </div>
               <div>
                 <img 
@@ -589,9 +550,6 @@ const Home = () => {
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Too many to list</h3>
                 <p className="text-gray-700 mb-6">Open Explore to browse every section and tool.</p>
-                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
-                  <a href="/explore">Explore All</a>
-                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
