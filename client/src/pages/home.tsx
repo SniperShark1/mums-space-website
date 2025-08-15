@@ -15,7 +15,7 @@ import stage25Image from "@assets/Screenshot_24_1755235176114.png";
 import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
 import downloadImage from "@assets/Screenshot_37_1755235284470.png";
 import babyIsHereImage from "@assets/Screenshot_38_1755235350831.png";
-import chatroomImage from "@assets/Screenshot_40_1755236364871.png";
+import chatroomImage from "@assets/chatroom.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
