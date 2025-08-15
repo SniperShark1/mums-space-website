@@ -347,21 +347,21 @@ const Home = () => {
       <section id="library" className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Explore MumSpace</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Our eBook Library</h2>
             
             {/* Introduction */}
             <div className="mb-16 text-center">
               <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                Explore MumSpace gives you instant access to trusted, expert-written guides for every stage of motherhood. Whether you're preparing for a new baby, raising toddlers, supporting school-aged kids, or looking after yourself as a mum, there's something here for you!
+                Our eBook Library gives you instant access to trusted, expert-written guides for every stage of motherhood. Whether you're preparing for a new baby, raising toddlers, supporting school-aged kids, or looking after yourself as a mum, there's something here for you!
               </p>
             </div>
 
-            {/* First Section - Image Left, Text Right */}
+            {/* First Image and Explanation */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <img 
                   src="/ebook-library-1.png" 
-                  alt="MumSpace library featuring top shelf books, babies, and toddlers sections" 
+                  alt="eBook Library featuring top shelf books, babies, and toddlers sections" 
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
               </div>
@@ -379,9 +379,9 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Second Section - Text Left, Image Right */}
+            {/* Second Image and Explanation */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
+              <div className="order-2 md:order-1">
                 <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Support for Every Family</h3>
                 <p className="text-gray-700 mb-4">
                   As your children grow, our <strong>School Age & Teenagers</strong> section provides support with Teen Communication and Homework Help Strategies for those important later years.
@@ -393,21 +393,21 @@ const Home = () => {
                   Most importantly, our <strong>Self Help for Mums</strong> section focuses on your wellbeing with guides like Mindful Motherhood and Mum Self-Care Guide, because looking after you is just as important.
                 </p>
               </div>
-              <div>
+              <div className="order-1 md:order-2">
                 <img 
                   src="/ebook-library-2.png" 
-                  alt="MumSpace library showing school age, disabilities support, and self help sections" 
+                  alt="eBook Library showing school age, disabilities support, and self help sections" 
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
               </div>
             </div>
 
-            {/* Third Section - Image Left, Text Right */}
+            {/* Third Image and Explanation */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <img 
                   src="/ebook-library-3.png" 
-                  alt="MumSpace library featuring empty nest, mums-to-be, and food sections" 
+                  alt="eBook Library featuring empty nest, mums-to-be, and food sections" 
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
               </div>

@@ -31,7 +31,7 @@ const Navigation = () => {
     { id: 'home', label: 'Home' },
     { id: 'download', label: 'Download' },
     { id: 'about', label: 'About' },
-    { id: 'library', label: 'Explore MumSpace' },
+    { id: 'library', label: 'eBook Library' },
     { id: 'reviews', label: 'Reviews', isPage: true },
     { id: 'policies', label: 'Policies' },
   ];
