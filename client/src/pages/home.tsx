@@ -392,7 +392,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Debates</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Vote, comment, and see what the community thinks.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Vote, comment, and see what the community thinks.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Engage in thoughtful discussions about parenting choices, from sleep training methods to feeding decisions. Share your perspective and learn from diverse experiences.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Vote on topics that matter to you and discover what other mums in similar situations have chosen to do.</p>
               </div>
             </div>
 
@@ -400,7 +402,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Chatroom</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Drop in for live, friendly conversation.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Drop in for live, friendly conversation.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Connect instantly with other mums online right now. Get quick advice, share a laugh, or just chat about your day with women who understand.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Whether you need immediate support or want to offer encouragement to others, our chatroom is always buzzing with friendly conversation.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -424,7 +428,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Guides (eBooks)</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Short, expert guides you can read anytime.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Short, expert guides you can read anytime.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Access our curated library of expert-written guides covering everything from pregnancy to early childhood. Each guide is designed to be practical and easy to digest.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Download guides to read offline, bookmark your favorites, and get trusted advice whenever you need it most.</p>
               </div>
             </div>
 
@@ -432,7 +438,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Meal Planner</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Plan weekly meals and auto-build a shopping list.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Plan weekly meals and auto-build a shopping list.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Take the stress out of meal planning with our smart planner. Add meals for breakfast, lunch, dinner, and snacks, then generate an organized shopping list automatically.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Save your favorite meal combinations and never wonder "what's for dinner?" again. Perfect for busy mums juggling family nutrition.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -456,7 +464,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Baby is Here</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Celebrate milestones and find support in the newborn stage.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Celebrate milestones and find support in the newborn stage.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Share your beautiful birth story and celebrate this incredible milestone with the community. Document labor details, share photos, and receive loving support from other mums.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Connect with other new mothers, share your recovery journey, and find encouragement during those early precious weeks with your newborn.</p>
               </div>
             </div>
 
@@ -464,7 +474,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Contraction Tracker</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Track timings and intervals in real time.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Track timings and intervals in real time.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Monitor your contractions with precision during labor. Simply tap to start and stop timing, and our tracker automatically calculates duration and intervals.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">See your contraction patterns clearly with detailed history and summaries to help you know when it's time to head to the hospital.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -488,7 +500,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Feeding Tracker</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Log breast, bottle, and solids with easy history.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Log breast, bottle, and solids with easy history.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Keep track of your baby's feeding schedule with our comprehensive tracker. Monitor breastfeeding sessions, bottle feeds, and solid food introduction with suggested timing schedules.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">View weekly and monthly statistics to understand feeding patterns and ensure your little one is getting proper nutrition.</p>
               </div>
             </div>
 
@@ -496,7 +510,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Mums-to-be</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Pregnancy topics, tools, and support in one place.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Pregnancy topics, tools, and support in one place.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Navigate your pregnancy journey with confidence using our comprehensive pregnancy toolkit. Track milestones, access specialized content, and connect with other expecting mothers.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">From first trimester symptoms to birth preparation, find everything you need to support a healthy, informed pregnancy experience.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -520,7 +536,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">0–1</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Newborn to one: sleep, feeding, routines, milestones.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Newborn to one: sleep, feeding, routines, milestones.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Navigate the crucial first year with specialized content for newborns to one-year-olds. Access baby recipes, establish routines, and track important developmental milestones.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Connect with other new mums, share experiences, and get support during this incredible but challenging first year of parenthood.</p>
               </div>
             </div>
 
@@ -528,7 +546,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">2–5</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Toddlers to preschool: behaviour, play, toilet training.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Toddlers to preschool: behaviour, play, toilet training.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Support your growing child through the toddler and preschool years. Access specialized tools for behavior management, developmental activities, and important milestones like toilet training.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Find age-appropriate guidance, connect with other parents of similar-aged children, and navigate this exciting stage of growth and learning together.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
@@ -552,7 +572,9 @@ const Home = () => {
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Reviews</h3>
-                <p className="text-gray-600 text-base leading-relaxed">See honest feedback from mums using MumSpace.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">See honest feedback from mums using MumSpace.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Read authentic testimonials from verified users who share their real experiences with our community and features. From finding supportive friendships to accessing helpful resources.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Discover how Mum's Space has helped other mothers feel less isolated and more confident in their parenting journey.</p>
               </div>
             </div>
 
@@ -560,7 +582,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Download the App</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Install on iOS or Android for faster access.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Install on iOS or Android for faster access.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Join over 2,600 women who have already downloaded Mum's Space. Available for iPhone, Android, and PC, so you can stay connected wherever you are.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Get instant access to our supportive community of mothers and all the tools you need for your parenting journey. Download is completely free.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
