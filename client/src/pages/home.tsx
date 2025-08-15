@@ -414,7 +414,7 @@ const Home = () => {
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
-                  src="/chatroom.webp" 
+                  src="/chatroom-screenshot.png" 
                   alt="Live chatroom with ongoing conversations between mums" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
