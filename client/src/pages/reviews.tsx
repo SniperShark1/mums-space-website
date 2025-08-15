@@ -83,12 +83,15 @@ const Reviews = () => {
               </Card>
 
               <Card className="section-card p-8 text-center shadow-lg">
-                <div className="flex justify-center mb-4">
-                  {renderStars(Math.round(Number(averageRating)))}
+                <div className="w-20 h-20 mx-auto mb-6 bg-mums-accent rounded-full flex items-center justify-center">
+                  <Star className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-4xl font-bold text-mums-dark mb-3">
+                <h3 className="text-4xl font-bold text-mums-dark mb-3 text-center">
                   {averageRating}
                 </h3>
+                <div className="flex justify-center mb-3">
+                  {renderStars(Math.round(Number(averageRating)))}
+                </div>
                 <p className="text-gray-600 font-medium text-center">Average Rating</p>
               </Card>
 

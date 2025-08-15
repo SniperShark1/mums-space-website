@@ -77,6 +77,21 @@ const AdminPanel = () => {
                 <h3 className="text-4xl font-bold text-mums-dark mb-3 text-center">
                   {averageRating}
                 </h3>
+                <div className="flex justify-center mb-3">
+                  {/* Note: renderStars function not available in admin-panel, would need to import or create */}
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star
+                        key={star}
+                        className={`w-5 h-5 ${
+                          star <= Math.round(Number(averageRating))
+                            ? 'fill-yellow-400 text-yellow-400'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
                 <p className="text-gray-600 font-medium text-center">Average Rating</p>
               </Card>
 
