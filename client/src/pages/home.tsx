@@ -348,214 +348,214 @@ const Home = () => {
 
       {/* eBook Library Section */}
       <section id="library" className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Explore Mums Space</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-8 md:p-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 text-mums-dark">Explore Mums Space</h2>
             
             {/* Section 1: Stories - Image Right */}
-            <div className="grid md:grid-cols-[60%_40%] gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
-                <p className="text-gray-700">Real experiences from mums at every stage.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Stories</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Real experiences from mums at every stage.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src={storiesImage} 
-                  alt="Mums sharing stories" 
+                  alt="Mums sharing pregnancy and parenting stories in community discussions" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 2: Debates - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Debates</h3>
-                <p className="text-gray-700 mb-6">Vote, comment, and see what the community thinks.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src={debatesImage} 
-                  alt="Debates feature with voting interface" 
+                  alt="Community debates with voting interface and discussion threads" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Debates</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Vote, comment, and see what the community thinks.</p>
               </div>
             </div>
 
             {/* Section 3: Chatroom - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Chatroom</h3>
-                <p className="text-gray-700 mb-6">Drop in for live, friendly conversation.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Chatroom</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Drop in for live, friendly conversation.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/chatroom.webp" 
                   alt="Live chatroom with ongoing conversations between mums" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 4: Guides (eBooks) - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Guides (eBooks)</h3>
-                <p className="text-gray-700 mb-6">Short, expert guides you can read anytime.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src="/guides.webp" 
                   alt="Digital library of expert parenting guides and eBooks" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Guides (eBooks)</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Short, expert guides you can read anytime.</p>
               </div>
             </div>
 
             {/* Section 5: Meal Planner - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Meal Planner</h3>
-                <p className="text-gray-700 mb-6">Plan weekly meals and auto-build a shopping list.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Meal Planner</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Plan weekly meals and auto-build a shopping list.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/meal-planner.webp" 
                   alt="Weekly meal planner with auto-generated shopping lists" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 6: Tips & Tricks - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Tips & Tricks</h3>
-                <p className="text-gray-700 mb-6">Quick wins for pregnancy and parenting life.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src="/tips.webp" 
                   alt="Quick parenting tips and practical advice for daily challenges" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Tips & Tricks</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Quick wins for pregnancy and parenting life.</p>
               </div>
             </div>
 
             {/* Section 7: Contraction Tracker - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Contraction Tracker</h3>
-                <p className="text-gray-700 mb-6">Track timings and intervals in real time.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Contraction Tracker</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Track timings and intervals in real time.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/contraction-tracker.webp" 
                   alt="Real-time contraction tracking tool with timing intervals" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 8: Feeding Tracker - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Feeding Tracker</h3>
-                <p className="text-gray-700 mb-6">Log breast, bottle, and solids with easy history.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src="/feeding-tracker.webp" 
                   alt="Baby feeding tracker for breast, bottle and solid food logging" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Feeding Tracker</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Log breast, bottle, and solids with easy history.</p>
               </div>
             </div>
 
             {/* Section 9: Mums-to-be - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Mums-to-be</h3>
-                <p className="text-gray-700 mb-6">Pregnancy topics, tools, and support in one place.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Mums-to-be</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Pregnancy topics, tools, and support in one place.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/mums-to-be.webp" 
                   alt="Pregnancy tools, topics and community support for expecting mothers" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 10: 0–1 - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">0–1</h3>
-                <p className="text-gray-700 mb-6">Newborn to one: sleep, feeding, routines, milestones.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src="/stage-0-1.webp" 
                   alt="Newborn care guide with sleep, feeding schedules and milestone tracking" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">0–1</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Newborn to one: sleep, feeding, routines, milestones.</p>
               </div>
             </div>
 
             {/* Section 11: 2–5 - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">2–5</h3>
-                <p className="text-gray-700 mb-6">Toddlers to preschool: behaviour, play, toilet training.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">2–5</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Toddlers to preschool: behaviour, play, toilet training.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/stage-2-5.webp" 
                   alt="Toddler development activities, behavior guidance and preschool preparation" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
 
             {/* Section 12: Reviews - Image Left */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Reviews</h3>
-                <p className="text-gray-700 mb-6">See honest feedback from mums using MumSpace.</p>
-              </div>
-              <div className="order-1 md:order-2">
+            <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
+              <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
                   src="/reviews.webp" 
                   alt="Honest reviews and testimonials from mums using the app" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
+              </div>
+              <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Reviews</h3>
+                <p className="text-gray-600 text-base leading-relaxed">See honest feedback from mums using MumSpace.</p>
               </div>
             </div>
 
             {/* Section 13: Download the App - Image Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Download the App</h3>
-                <p className="text-gray-700 mb-6">Install on iOS or Android for faster access.</p>
+            <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
+              <div className="max-w-[480px]">
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Download the App</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Install on iOS or Android for faster access.</p>
               </div>
-              <div>
+              <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
                   src="/download.webp" 
                   alt="Mobile app download screens for iOS and Android platforms" 
                   loading="lazy"
-                  className="rounded-2xl w-full h-auto"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
             </div>
@@ -598,7 +598,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
