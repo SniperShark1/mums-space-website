@@ -1,0 +1,113 @@
+Subject: Explore Mums Space — replace the card grid with alternating image + text blocks
+
+Hi Replit,
+
+This is the third request for the Explore page. Please remove the current card/grid layout entirely and replace it with alternating image + text sections as specified below.
+
+What to build (no deviations)
+
+Keep the page H1: Explore Mums Space.
+
+Under the H1, replace everything with a sequence of sections.
+
+Each section =
+
+Heading (section name)
+
+One-line description (use the exact copy below)
+
+Illustrative image (right side for odd sections, left side for even sections; alternate all the way down)
+
+CTA link on the text side that routes to the correct area (see link targets below).
+
+No system/browser popups anywhere on this page.
+
+Delete the “Test Feature” label and remove the old tiles.
+
+Order + copy (exact text)
+
+Stories — Real experiences from mums at every stage.
+
+Debates — Vote, comment, and see what the community thinks.
+
+Chatroom — Drop in for live, friendly conversation.
+
+Guides (eBooks) — Short, expert guides you can read anytime.
+
+Tips & Tricks — Quick wins for pregnancy and parenting life.
+
+Contraction Tracker — Track timings and intervals in real time.
+
+Feeding Tracker — Log breast, bottle, and solids with easy history.
+
+Meal Planner — Plan weekly meals and auto-build a shopping list.
+
+Mums-to-be — Pregnancy topics, tools, and support in one place.
+
+0–1 — Newborn to one: sleep, feeding, routines, milestones.
+
+2–5 — Toddlers to preschool: behaviour, play, toilet training.
+
+Reviews — See honest feedback from mums using MumSpace.
+
+Download the App — Install on iOS or Android for faster access.
+
+Too many to list — Open Explore to browse every section and tool.
+
+Layout requirements
+
+Alternating layout: Section 1 image right, Section 2 image left, Section 3 image right, etc. Continue this pattern.
+
+Spacing: Consistent vertical rhythm; clear separation between sections; no overlapping text.
+
+Mobile: Stack vertically (text first, image second).
+
+Tablet/Desktop: Two columns; text ~60%, image ~40%.
+
+Images: Use clean, relevant visuals (placeholder is fine). Include meaningful alt text.
+
+Link targets (CTAs)
+
+Stories → /stories
+
+Debates → /debates
+
+Chatroom → /chatroom
+
+Guides (eBooks) → /guides
+
+Tips & Tricks → /tips
+
+Contraction Tracker → /tools/contraction-tracker
+
+Feeding Tracker → /tools/feeding-tracker
+
+Meal Planner → /tools/meal-planner
+
+Mums-to-be → /mums-to-be
+
+0–1 → /stage/0-1
+
+2–5 → /stage/2-5
+
+Reviews → /reviews
+
+Download the App → /download
+
+Too many to list → /explore (directory)
+
+Acceptance checklist (what I will check)
+
+The old card grid is gone and no “Test Feature” text remains.
+
+Every section shows: heading, one-liner, alternating image placement, and a working CTA.
+
+On mobile, sections stack cleanly (no cropped text/images).
+
+No browser-native alert/confirm/prompt dialogs on this page.
+
+All links navigate to the paths above.
+
+Please confirm when this is implemented exactly as written. If anything is unclear, ask before building—don’t improvise.
+
+Thanks.
