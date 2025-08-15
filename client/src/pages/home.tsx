@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
 import storiesImage from "@assets/Screenshot_31_1755233077629.png";
+import debatesImage from "@assets/Screenshot_32_1755233328576.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
@@ -375,9 +376,10 @@ const Home = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img 
-                  src="/debates-screenshot.png" 
+                  src={debatesImage} 
                   alt="Debates feature with voting interface" 
-                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                  loading="lazy"
+                  className="rounded-2xl w-full h-auto"
                 />
               </div>
             </div>
