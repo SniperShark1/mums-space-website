@@ -361,6 +361,7 @@ const Home = () => {
               <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
                 <h4 className="text-lg font-semibold mb-3 text-mums-dark">Stories</h4>
                 <p className="text-sm text-gray-600">Real experiences from mums at every stage.</p>
+                <p className="text-xs text-mums-accent mt-2 font-medium">(Test Feature)</p>
               </div>
 
               <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
