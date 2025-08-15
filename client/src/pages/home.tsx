@@ -597,7 +597,9 @@ const Home = () => {
                   src={downloadImage} 
                   alt="Mobile app download screens for iOS and Android platforms" 
                   loading="lazy"
-                  className="w-full h-auto rounded-3xl shadow-lg aspect-video"
+                  className="w-full h-auto rounded-3xl shadow-lg aspect-video cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                  onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}
+                  data-testid="img-download-link"
                 />
               </div>
             </div>
