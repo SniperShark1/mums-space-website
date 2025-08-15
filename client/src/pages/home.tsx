@@ -431,19 +431,46 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Feature Showcase - Debates */}
+            {/* Stories Feature - Image Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Real Stories from Real Mums</h3>
+                <p className="text-gray-700 mb-4">
+                  <strong>Stories</strong> is where mums share their genuine experiences at every stage of motherhood. From pregnancy symptoms to toddler tantrums, get honest insights from women who've been there.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Share your own experiences anonymously</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Read real stories from other mums</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Filter by topics that matter to you</span>
+                  </div>
+                </div>
+                <div className="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                  <p className="text-sm text-orange-800 font-medium">Currently in testing phase</p>
+                </div>
+              </div>
+              <div>
                 <img 
-                  src="/debates-screenshot.png" 
-                  alt="Mums to Be Debates - Vote and discuss parenting topics" 
+                  src="/stories-main.png" 
+                  alt="Stories feature showing pregnancy symptoms discussions" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Join the Conversation</h3>
+            </div>
+
+            {/* Debates Feature - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Join the Debate</h3>
                 <p className="text-gray-700 mb-4">
-                  <strong>Debates</strong> let you vote on parenting topics and see what other mums think. Whether it's "Dummy or No dummy" or other parenting decisions, get real perspectives from the community.
+                  <strong>Debates</strong> let you vote on parenting topics and see what the community thinks. From "Dummy or No dummy" to feeding choices, get real perspectives from other mums and share your own views.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -452,7 +479,7 @@ const Home = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Share your comments and experiences</span>
+                    <span className="text-sm text-gray-600">Comment and share your experiences</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
@@ -460,14 +487,21 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/debates-screenshot.png" 
+                  alt="Mums to Be Debates - Vote and discuss parenting topics" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
             </div>
 
-            {/* Feature Showcase - Chatroom */}
+            {/* Chatroom Feature - Image Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Real-Time Support</h3>
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Live Chat Support</h3>
                 <p className="text-gray-700 mb-4">
-                  <strong>Chatrooms</strong> provide instant connection with other mums going through similar experiences. Get support, share advice, or just have a friendly chat.
+                  <strong>Chatrooms</strong> provide instant connection with other mums going through similar experiences. Drop in for live, friendly conversation, get support, or share advice in our age-specific rooms.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -484,7 +518,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="order-1 md:order-2">
+              <div>
                 <img 
                   src="/chatroom-screenshot.png" 
                   alt="Mum's Space Chatroom Interface showing active conversations" 
@@ -493,43 +527,12 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Feature Showcase - eBook Library */}
+            {/* eBook Library Feature - Image Left */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <ImageGallery
-                  triggerImage={{
-                    src: "/ebook-library-main.png",
-                    alt: "eBook Library with Top Shelf features and baby guides",
-                    className: "rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
-                  }}
-                  images={[
-                    {
-                      src: "/ebook-library-main.png",
-                      alt: "eBook Library main interface",
-                      title: "eBook Library - Top Shelf Features & Baby Guides"
-                    },
-                    {
-                      src: "/stories-main.png",
-                      alt: "Stories feature showing pregnancy symptoms discussions",
-                      title: "Stories - Real Mum Experiences (Test Feature)"
-                    },
-                    {
-                      src: "/debates-screenshot.png",
-                      alt: "Debates feature with voting",
-                      title: "Debates - Community Voting"
-                    },
-                    {
-                      src: "/chatroom-screenshot.png",
-                      alt: "Chatroom interface",
-                      title: "Chatrooms - Live Conversations"
-                    }
-                  ]}
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Expert Guides & Resources</h3>
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Expert Guides Library</h3>
                 <p className="text-gray-700 mb-4">
-                  <strong>eBook Library</strong> provides expert-written guides for every parenting stage. From premium featured content to specialized guides for babies, toddlers, and beyond.
+                  <strong>Guides (eBooks)</strong> provide short, expert guides you can read anytime. From Top Shelf premium content to specialized collections for every age group and parenting challenge.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -546,9 +549,51 @@ const Home = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Sell your own eBooks to the community</span>
+                    <span className="text-sm text-gray-600">Authors can sell eBooks to the community</span>
                   </div>
                 </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/ebook-library-main.png" 
+                  alt="eBook Library with Top Shelf features and baby guides" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Meal Planner Feature - Image Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Weekly Meal Planning Made Easy</h3>
+                <p className="text-gray-700 mb-4">
+                  <strong>Meal Planner</strong> helps you plan weekly meals and auto-builds a shopping list. Perfect for busy mums who want to stay organized with family meals and reduce daily stress.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Plan all meals for the week in one view</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Automatic shopping list generation</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Search meals by week or ingredients</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
+                    <span className="text-sm text-gray-600">Family-friendly meal suggestions</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="/meal-planner.png" 
+                  alt="Baby Meal Planner showing weekly meal organization" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
               </div>
             </div>
 
