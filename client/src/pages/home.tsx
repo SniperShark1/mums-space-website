@@ -14,6 +14,7 @@ import stage01Image from "@assets/Screenshot_22_1755235131834.png";
 import stage25Image from "@assets/Screenshot_24_1755235176114.png";
 import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
 import downloadImage from "@assets/Screenshot_37_1755235284470.png";
+import babyIsHereImage from "@assets/Screenshot_38_1755235350831.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
@@ -441,19 +442,19 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Section 6: Tips & Tricks - Image Left */}
+            {/* Section 6: Baby is Here - Image Left */}
             <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start mb-20">
               <div className="w-full max-w-[560px] order-2 lg:order-1">
                 <img 
-                  src="/tips.webp" 
-                  alt="Quick parenting tips and practical advice for daily challenges" 
+                  src={babyIsHereImage} 
+                  alt="Baby milestone celebration with birth announcement and community support" 
                   loading="lazy"
                   className="w-full h-auto rounded-3xl shadow-lg aspect-video"
                 />
               </div>
               <div className="max-w-[480px] order-1 lg:order-2 lg:ml-auto">
-                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Tips & Tricks</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Quick wins for pregnancy and parenting life.</p>
+                <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Baby is Here</h3>
+                <p className="text-gray-600 text-base leading-relaxed">Celebrate milestones and find support in the newborn stage.</p>
               </div>
             </div>
 
