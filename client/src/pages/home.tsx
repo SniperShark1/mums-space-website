@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
-import storiesImage from "@assets/Screenshot_26_1755232805982.png";
+import storiesImage from "@assets/Screenshot_31_1755233077629.png";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 import { Button } from "@/components/ui/button";
@@ -357,7 +357,7 @@ const Home = () => {
                 <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
                 <p className="text-gray-700">Real experiences from mums at every stage.</p>
               </div>
-              <div>
+              <div className="pr-4">
                 <img 
                   src={storiesImage} 
                   alt="Mums sharing stories" 
