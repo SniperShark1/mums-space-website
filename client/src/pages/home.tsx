@@ -350,248 +350,253 @@ const Home = () => {
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Explore Mums Space</h2>
             
-            {/* Introduction */}
-            <div className="mb-16 text-center">
-              <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                Discover all the features inside Mum's Space - from real-time conversations to expert guides, tracking tools, and support for every stage of motherhood.
-              </p>
-            </div>
-
-            {/* App Features Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Stories</h4>
-                <p className="text-sm text-gray-600">Real experiences from mums at every stage.</p>
-                <p className="text-xs text-mums-accent mt-2 font-medium">(Test Feature)</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Debates</h4>
-                <p className="text-sm text-gray-600">Vote, comment, and see what the community thinks.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Chatroom</h4>
-                <p className="text-sm text-gray-600">Drop in for live, friendly conversation.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Guides (eBooks)</h4>
-                <p className="text-sm text-gray-600">Short, expert guides you can read anytime.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Tips & Tricks</h4>
-                <p className="text-sm text-gray-600">Quick wins for pregnancy and parenting life.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Contraction Tracker</h4>
-                <p className="text-sm text-gray-600">Track timings and intervals in real time.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Feeding Tracker</h4>
-                <p className="text-sm text-gray-600">Log breast, bottle, and solids with easy history.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Meal Planner</h4>
-                <p className="text-sm text-gray-600">Plan weekly meals and auto-build a shopping list.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Mums-to-be</h4>
-                <p className="text-sm text-gray-600">Pregnancy topics, tools, and support in one place.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">0–1</h4>
-                <p className="text-sm text-gray-600">Newborn to one: sleep, feeding, routines, milestones.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">2–5</h4>
-                <p className="text-sm text-gray-600">Toddlers to preschool: behaviour, play, toilet training.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Reviews</h4>
-                <p className="text-sm text-gray-600">See honest feedback from mums using MumSpace.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Download the App</h4>
-                <p className="text-sm text-gray-600">Install on iOS or Android for faster access.</p>
-              </div>
-
-              <div className="bg-white bg-opacity-50 rounded-2xl p-6 text-center md:col-span-2 lg:col-span-1">
-                <h4 className="text-lg font-semibold mb-3 text-mums-dark">Too many to list</h4>
-                <p className="text-sm text-gray-600">Open Explore to browse every section and tool.</p>
-              </div>
-            </div>
-
-            {/* Stories Feature - Image Right */}
+            {/* Section 1: Stories - Image Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Real Stories from Real Mums</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Stories</strong> is where mums share their genuine experiences at every stage of motherhood. From pregnancy symptoms to toddler tantrums, get honest insights from women who've been there.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Share your own experiences anonymously</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Read real stories from other mums</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Filter by topics that matter to you</span>
-                  </div>
-                </div>
-                <div className="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                  <p className="text-sm text-orange-800 font-medium">Currently in testing phase</p>
-                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Stories</h3>
+                <p className="text-gray-700 mb-6">Real experiences from mums at every stage.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/stories">Explore Stories</a>
+                </Button>
               </div>
               <div>
                 <img 
                   src="/stories-main.png" 
-                  alt="Stories feature showing pregnancy symptoms discussions" 
+                  alt="Stories feature showing real mum experiences" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
             </div>
 
-            {/* Debates Feature - Image Left */}
+            {/* Section 2: Debates - Image Left */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Join the Debate</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Debates</strong> let you vote on parenting topics and see what the community thinks. From "Dummy or No dummy" to feeding choices, get real perspectives from other mums and share your own views.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Vote on active debates</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Comment and share your experiences</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Start new debates on topics you care about</span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Debates</h3>
+                <p className="text-gray-700 mb-6">Vote, comment, and see what the community thinks.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/debates">Join Debates</a>
+                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
                   src="/debates-screenshot.png" 
-                  alt="Mums to Be Debates - Vote and discuss parenting topics" 
+                  alt="Debates feature with voting interface" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
             </div>
 
-            {/* Chatroom Feature - Image Right */}
+            {/* Section 3: Chatroom - Image Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Live Chat Support</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Chatrooms</strong> provide instant connection with other mums going through similar experiences. Drop in for live, friendly conversation, get support, or share advice in our age-specific rooms.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Age-specific chatrooms (Mums-to-be, 0-1, 2-5)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Live conversations with real mums</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Private, women-only community</span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Chatroom</h3>
+                <p className="text-gray-700 mb-6">Drop in for live, friendly conversation.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/chatroom">Enter Chatroom</a>
+                </Button>
               </div>
               <div>
                 <img 
                   src="/chatroom-screenshot.png" 
-                  alt="Mum's Space Chatroom Interface showing active conversations" 
+                  alt="Chatroom interface for live conversations" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
             </div>
 
-            {/* eBook Library Feature - Image Left */}
+            {/* Section 4: Guides (eBooks) - Image Left */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Expert Guides Library</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Guides (eBooks)</strong> provide short, expert guides you can read anytime. From Top Shelf premium content to specialized collections for every age group and parenting challenge.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Top Shelf premium parenting guides</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Age-specific collections (0-1, 2-5, etc.)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Subscribe to access all paid content</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Authors can sell eBooks to the community</span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Guides (eBooks)</h3>
+                <p className="text-gray-700 mb-6">Short, expert guides you can read anytime.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/guides">Browse Guides</a>
+                </Button>
               </div>
               <div className="order-1 md:order-2">
                 <img 
                   src="/ebook-library-main.png" 
-                  alt="eBook Library with Top Shelf features and baby guides" 
+                  alt="eBook library with expert guides" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
             </div>
 
-            {/* Meal Planner Feature - Image Right */}
+            {/* Section 5: Meal Planner - Image Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-mums-dark">Weekly Meal Planning Made Easy</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Meal Planner</strong> helps you plan weekly meals and auto-builds a shopping list. Perfect for busy mums who want to stay organized with family meals and reduce daily stress.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Plan all meals for the week in one view</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Automatic shopping list generation</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Search meals by week or ingredients</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-mums-accent rounded-full"></div>
-                    <span className="text-sm text-gray-600">Family-friendly meal suggestions</span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Meal Planner</h3>
+                <p className="text-gray-700 mb-6">Plan weekly meals and auto-build a shopping list.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/tools/meal-planner">Plan Meals</a>
+                </Button>
               </div>
               <div>
                 <img 
                   src="/meal-planner.png" 
-                  alt="Baby Meal Planner showing weekly meal organization" 
+                  alt="Meal planner showing weekly organization" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 6: Tips & Tricks - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Tips & Tricks</h3>
+                <p className="text-gray-700 mb-6">Quick wins for pregnancy and parenting life.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/tips">View Tips</a>
+                </Button>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/stories-main.png" 
+                  alt="Tips and tricks for parenting" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 7: Contraction Tracker - Image Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Contraction Tracker</h3>
+                <p className="text-gray-700 mb-6">Track timings and intervals in real time.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/tools/contraction-tracker">Start Tracking</a>
+                </Button>
+              </div>
+              <div>
+                <img 
+                  src="/debates-screenshot.png" 
+                  alt="Contraction tracker interface" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 8: Feeding Tracker - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Feeding Tracker</h3>
+                <p className="text-gray-700 mb-6">Log breast, bottle, and solids with easy history.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/tools/feeding-tracker">Track Feeding</a>
+                </Button>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/chatroom-screenshot.png" 
+                  alt="Feeding tracker interface" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 9: Mums-to-be - Image Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Mums-to-be</h3>
+                <p className="text-gray-700 mb-6">Pregnancy topics, tools, and support in one place.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/mums-to-be">Explore Pregnancy</a>
+                </Button>
+              </div>
+              <div>
+                <img 
+                  src="/ebook-library-main.png" 
+                  alt="Pregnancy support and tools" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 10: 0–1 - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">0–1</h3>
+                <p className="text-gray-700 mb-6">Newborn to one: sleep, feeding, routines, milestones.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/stage/0-1">Newborn Stage</a>
+                </Button>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/meal-planner.png" 
+                  alt="Newborn care and milestones" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 11: 2–5 - Image Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">2–5</h3>
+                <p className="text-gray-700 mb-6">Toddlers to preschool: behaviour, play, toilet training.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/stage/2-5">Toddler Stage</a>
+                </Button>
+              </div>
+              <div>
+                <img 
+                  src="/stories-main.png" 
+                  alt="Toddler development and activities" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 12: Reviews - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Reviews</h3>
+                <p className="text-gray-700 mb-6">See honest feedback from mums using MumSpace.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/reviews">Read Reviews</a>
+                </Button>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/debates-screenshot.png" 
+                  alt="User reviews and feedback" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 13: Download the App - Image Right */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Download the App</h3>
+                <p className="text-gray-700 mb-6">Install on iOS or Android for faster access.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/download">Download Now</a>
+                </Button>
+              </div>
+              <div>
+                <img 
+                  src="/chatroom-screenshot.png" 
+                  alt="Mobile app download" 
+                  className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
+                />
+              </div>
+            </div>
+
+            {/* Section 14: Too many to list - Image Left */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-semibold mb-4 text-mums-dark">Too many to list</h3>
+                <p className="text-gray-700 mb-6">Open Explore to browse every section and tool.</p>
+                <Button asChild className="bg-mums-accent hover:bg-mums-accent/90">
+                  <a href="/explore">Explore All</a>
+                </Button>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/ebook-library-main.png" 
+                  alt="Complete app features overview" 
                   className="rounded-2xl shadow-lg w-full h-auto border border-mums-accent border-opacity-20"
                 />
               </div>
