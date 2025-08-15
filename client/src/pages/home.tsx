@@ -366,7 +366,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-[440px_1fr] gap-16 items-start mb-20">
               <div className="max-w-[480px]">
                 <h3 className="text-xl font-semibold mb-3 text-mums-dark leading-tight">Stories</h3>
-                <p className="text-gray-600 text-base leading-relaxed">Real experiences from mums at every stage.</p>
+                <p className="text-gray-600 text-base leading-relaxed mb-4">Real experiences from mums at every stage.</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">Share your journey, struggles, and victories with a supportive community. From pregnancy symptoms to parenting challenges, connect with mothers who understand exactly what you're going through.</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Browse stories by topic, share your own experiences, and find comfort in knowing you're not alone in your motherhood journey.</p>
               </div>
               <div className="w-full max-w-[560px] lg:ml-auto">
                 <img 
