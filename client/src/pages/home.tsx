@@ -15,6 +15,7 @@ import stage25Image from "@assets/two-five-updated.png";
 import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
 import downloadImage from "@assets/Screenshot_37_1755235284470.png";
 import babyIsHereImage from "@assets/Screenshot_38_1755235350831.png";
+import communityMothersImage from "@assets/community-mothers.png";
 
 import NewsletterSignup from "@/components/NewsletterSignup";
 
@@ -246,7 +247,25 @@ const Home = () => {
           <Card className="section-card rounded-3xl p-8 md:p-12 shadow-xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">About Mum's Space</h2>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Our Story Section */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-semibold mb-6 text-mums-accent">🌸 Our Story</h3>
+              <div className="max-w-3xl mx-auto space-y-4">
+                <p className="leading-relaxed">Mum's Space was born from the recognition that while motherhood is one of life's greatest joys, it can also be one of its loneliest journeys. Too often, mothers find themselves navigating sleepless nights, endless questions, and emotional challenges in silence. We wanted to change that.</p>
+                
+                <p className="leading-relaxed">Mum's Space is more than just an app — it's a sanctuary built by mothers, for mothers. A place where women from all walks of life can share their stories openly, without judgment. Whether it's celebrating milestones, seeking advice during difficult times, or simply finding someone who truly understands, Mum's Space was created to remind every mother that she is never alone.</p>
+              </div>
+            </div>
+
+            {/* Two Images Side by Side */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <img 
+                  src={communityMothersImage}
+                  alt="Diverse group of mothers and baby in supportive community" 
+                  className="rounded-2xl shadow-lg w-full h-auto"
+                />
+              </div>
               <div>
                 <img 
                   src="/about-image.png" 
@@ -254,18 +273,17 @@ const Home = () => {
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-mums-accent">🌸 Our Story</h3>
-                <p className="mb-4 leading-relaxed">Mum's Space was born from the recognition that while motherhood is one of life's greatest joys, it can also be one of its loneliest journeys. Too often, mothers find themselves navigating sleepless nights, endless questions, and emotional challenges in silence. We wanted to change that.</p>
-                
-                <p className="mb-4 leading-relaxed">Mum's Space is more than just an app — it's a sanctuary built by mothers, for mothers. A place where women from all walks of life can share their stories openly, without judgment. Whether it's celebrating milestones, seeking advice during difficult times, or simply finding someone who truly understands, Mum's Space was created to remind every mother that she is never alone.</p>
-                
-                <h3 className="text-2xl font-semibold mb-4 mt-8 text-mums-accent">💜 Our Mission</h3>
+            </div>
+
+            {/* Our Mission Section */}
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-6 text-mums-accent">💜 Our Mission</h3>
+              <div className="max-w-3xl mx-auto">
                 <p className="mb-4 leading-relaxed">Our mission is simple but powerful: to create a safe, inclusive, and supportive digital space where mothers and women feel seen, heard, and connected.</p>
                 
                 <p className="mb-4 leading-relaxed">We believe that motherhood should never be a solitary experience. At Mum's Space, women can:</p>
                 
-                <ul className="mb-4 space-y-2 text-gray-700">
+                <ul className="mb-6 space-y-2 text-gray-700 text-left inline-block">
                   <li className="flex items-start">
                     <span className="text-mums-accent mr-2">•</span>
                     Connect authentically with others who share their experiences.
@@ -284,7 +302,7 @@ const Home = () => {
                   </li>
                 </ul>
                 
-                <p className="mb-6 leading-relaxed">At its heart, Mum's Space is about building a community where women uplift each other, foster lasting friendships, and find strength in shared stories. Together, we are rewriting the narrative of motherhood — from isolation to connection, from doubt to confidence, from silence to support.</p>
+                <p className="leading-relaxed">At its heart, Mum's Space is about building a community where women uplift each other, foster lasting friendships, and find strength in shared stories. Together, we are rewriting the narrative of motherhood — from isolation to connection, from doubt to confidence, from silence to support.</p>
               </div>
             </div>
 
