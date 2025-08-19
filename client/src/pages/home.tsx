@@ -263,14 +263,14 @@ const Home = () => {
                 <img 
                   src={communityMothersImage}
                   alt="Diverse group of mothers and baby in supportive community" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover"
                 />
               </div>
               <div>
                 <img 
                   src="/about-image.png" 
                   alt="Mother and baby sharing a tender moment" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
+                  className="rounded-2xl shadow-lg w-full h-80 object-cover"
                 />
               </div>
             </div>
