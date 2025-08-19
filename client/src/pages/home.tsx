@@ -255,11 +255,36 @@ const Home = () => {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
-                <p className="mb-6 leading-relaxed">Mum's Space was born from the understanding that motherhood, while beautiful, can be isolating. We created a sanctuary where women can connect authentically, share experiences, and support one another through every stage of their journey.</p>
+                <h3 className="text-2xl font-semibold mb-4 text-mums-accent">🌸 Our Story</h3>
+                <p className="mb-4 leading-relaxed">Mum's Space was born from the recognition that while motherhood is one of life's greatest joys, it can also be one of its loneliest journeys. Too often, mothers find themselves navigating sleepless nights, endless questions, and emotional challenges in silence. We wanted to change that.</p>
                 
-                <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-                <p className="mb-6 leading-relaxed">To provide a safe, inclusive, and supportive digital space where mothers and women can build meaningful connections, share wisdom, seek advice, and celebrate the ups and downs of motherhood together.</p>
+                <p className="mb-4 leading-relaxed">Mum's Space is more than just an app — it's a sanctuary built by mothers, for mothers. A place where women from all walks of life can share their stories openly, without judgment. Whether it's celebrating milestones, seeking advice during difficult times, or simply finding someone who truly understands, Mum's Space was created to remind every mother that she is never alone.</p>
+                
+                <h3 className="text-2xl font-semibold mb-4 mt-8 text-mums-accent">💜 Our Mission</h3>
+                <p className="mb-4 leading-relaxed">Our mission is simple but powerful: to create a safe, inclusive, and supportive digital space where mothers and women feel seen, heard, and connected.</p>
+                
+                <p className="mb-4 leading-relaxed">We believe that motherhood should never be a solitary experience. At Mum's Space, women can:</p>
+                
+                <ul className="mb-4 space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-mums-accent mr-2">•</span>
+                    Connect authentically with others who share their experiences.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-mums-accent mr-2">•</span>
+                    Share wisdom gained through the ups and downs of parenting.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-mums-accent mr-2">•</span>
+                    Seek guidance and reassurance in moments of uncertainty.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-mums-accent mr-2">•</span>
+                    Celebrate the journey — from the small daily victories to the life-changing milestones.
+                  </li>
+                </ul>
+                
+                <p className="mb-6 leading-relaxed">At its heart, Mum's Space is about building a community where women uplift each other, foster lasting friendships, and find strength in shared stories. Together, we are rewriting the narrative of motherhood — from isolation to connection, from doubt to confidence, from silence to support.</p>
               </div>
             </div>
 
