@@ -9,7 +9,7 @@ import guidesImage from "@assets/Screenshot_14_1755234349059.png";
 import mealPlannerImage from "@assets/Screenshot_21_1755234508674.png";
 import contractionTrackerImage from "@assets/Screenshot_18_1755234564029.png";
 import feedingTrackerImage from "@assets/Screenshot_20_1755234646909.png";
-import mumsToBeImage from "@assets/mums-to-be-new.png";
+import mumsToBeImage from "@assets/mums-to-be-updated.png";
 import stage01Image from "@assets/zero-one-new.png";
 import stage25Image from "@assets/two-five-updated.png";
 import reviewsImage from "@assets/Screenshot_36_1755235233351.png";
