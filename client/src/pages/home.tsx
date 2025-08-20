@@ -1,4 +1,4 @@
-import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen, Clock, Mail, Star, Crown } from "lucide-react";
+import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen, Clock, Mail, Star, Crown, Facebook, Instagram } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -822,6 +822,37 @@ const Home = () => {
               </p>
               
               <NewsletterSignup />
+              
+              {/* Social Media Section */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-lg text-gray-700 mb-6">
+                  Prefer socials? Follow us on Facebook and Instagram for updates, sneak peeks, and community prompts. 
+                  <span className="text-mums-dark font-medium"> (Email gets first dibs on big announcements.)</span>
+                </p>
+                
+                <div className="flex justify-center gap-4">
+                  {/* Facebook Button */}
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61579660350521"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition-colors duration-300 shadow-lg"
+                  >
+                    <Facebook className="w-5 h-5" />
+                    <span className="font-medium">Follow on Facebook</span>
+                  </a>
+                  
+                  {/* Instagram Button - Coming Soon */}
+                  <button
+                    disabled
+                    className="flex items-center gap-3 bg-gray-400 text-white px-6 py-3 rounded-full cursor-not-allowed shadow-lg opacity-75"
+                    title="Instagram coming soon"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    <span className="font-medium">Instagram Soon</span>
+                  </button>
+                </div>
+              </div>
               
               <p className="text-sm text-gray-600 mt-6">
                 You can unsubscribe at any time. For urgent help, please contact your local support line.
