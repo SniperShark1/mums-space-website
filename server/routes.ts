@@ -9,7 +9,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertNewsletterSchema.parse(req.body);
       
-      // Check if email already exists
+      // Check if email already exists in local storage
       const existingSignups = await storage.getNewsletterSignups();
       const emailExists = existingSignups.some(signup => signup.email === validatedData.email);
       
@@ -17,7 +17,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: "Email already subscribed" });
       }
 
+      // Add to Mailchimp
+      const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
+      const mailchimpListId = process.env.MAILCHIMP_LIST_ID;
+      const mailchimpServerPrefix = process.env.MAILCHIMP_SERVER_PREFIX;
+
+      if (!mailchimpApiKey || !mailchimpListId || !mailchimpServerPrefix) {
+        console.error("Missing Mailchimp configuration");
+        return res.status(500).json({ error: "Newsletter service not configured" });
+      }
+
+      // Add subscriber to Mailchimp
+      const mailchimpUrl = `https://${mailchimpServerPrefix}.api.mailchimp.com/3.0/lists/${mailchimpListId}/members`;
+      
+      const mailchimpResponse = await fetch(mailchimpUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Basic ${Buffer.from(`anystring:${mailchimpApiKey}`).toString('base64')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email_address: validatedData.email,
+          status: 'subscribed',
+          merge_fields: {}
+        }),
+      });
+
+      if (!mailchimpResponse.ok) {
+        const mailchimpError = await mailchimpResponse.json();
+        console.error("Mailchimp error:", mailchimpError);
+        
+        // Check if it's a duplicate email error
+        if (mailchimpError.title === "Member Exists") {
+          return res.status(400).json({ error: "Email already subscribed" });
+        }
+        
+        return res.status(500).json({ error: "Failed to subscribe to newsletter" });
+      }
+
+      // Store locally as backup
       const newsletterSignup = await storage.addNewsletterSignup(validatedData);
+      
       res.status(201).json({ success: true, message: "Successfully subscribed to newsletter" });
     } catch (error) {
       console.error("Newsletter signup error:", error);
