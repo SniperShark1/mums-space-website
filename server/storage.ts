@@ -130,7 +130,7 @@ export class MemStorage implements IStorage {
         this.downloadStats.set(platform, {
           id: randomUUID(),
           platform,
-          downloadCount: Math.floor(Math.random() * 1000) + 500, // Some initial demo numbers
+          downloadCount: 0, // Set to zero as requested
           lastUpdated: new Date()
         });
       }
