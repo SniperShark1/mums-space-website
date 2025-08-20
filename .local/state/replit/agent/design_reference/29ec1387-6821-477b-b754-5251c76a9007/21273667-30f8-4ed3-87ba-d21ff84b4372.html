@@ -1,0 +1,565 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mum's Space - A Women-Only Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mums-pink': '#f6cbcd',
+                        'mums-dark': '#8E294F',
+                        'mums-accent': '#ec719e',
+                        'mums-light': '#faf0f1'
+                    },
+                    fontFamily: {
+                        'bodoni': ['Bodoni Moda', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background-color: #f6cbcd;
+            font-family: 'Bodoni Moda', serif;
+        }
+        
+        .hearts-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="30" opacity="0.14" fill="%23ec719e">❤️</text></svg>');
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(10px);
+        }
+        
+        .download-icon {
+            transition: transform 0.2s ease;
+        }
+        
+        .download-icon:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-mums-dark">
+    <!-- Background Pattern -->
+    <div class="hearts-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="content-overlay sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-md border-b border-mums-accent border-opacity-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'><rect width='200' height='80' fill='%23ec719e' rx='10'/><text x='100' y='45' text-anchor='middle' fill='white' font-family='serif' font-size='24' font-weight='600'>Mum's Space</text><text x='100' y='60' text-anchor='middle' fill='white' font-family='serif' font-size='12'>❤️</text></svg>" alt="Mum's Space Logo" class="h-10 w-auto">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-item px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="#download" class="nav-item px-3 py-2 rounded-md text-sm font-medium transition-colors">Download</a>
+                    <a href="#about" class="nav-item px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="#contact" class="nav-item px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    <a href="#policies" class="nav-item px-3 py-2 rounded-md text-sm font-medium transition-colors">Policies</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-mums-dark hover:bg-white hover:bg-opacity-30">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-30">Home</a>
+                <a href="#download" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-30">Download</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-30">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-30">Contact</a>
+                <a href="#policies" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white hover:bg-opacity-30">Policies</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="content-overlay py-12 md:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Logo Section with Hearts -->
+            <div class="text-center mb-12">
+                <div class="relative inline-block">
+                    <!-- Heart backdrop -->
+                    <div class="absolute inset-0 flex justify-center items-center -z-10">
+                        <div class="flex space-x-3 opacity-14">
+                            <span class="text-6xl text-mums-accent">❤️</span>
+                            <span class="text-5xl text-mums-accent transform -translate-y-2">💗</span>
+                            <span class="text-6xl text-mums-accent">💖</span>
+                        </div>
+                    </div>
+                    <!-- Logo -->
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 120'><rect width='300' height='120' fill='%23ec719e' rx='15'/><text x='150' y='70' text-anchor='middle' fill='white' font-family='serif' font-size='36' font-weight='600'>Mum's Space</text><text x='150' y='95' text-anchor='middle' fill='white' font-family='serif' font-size='18'>❤️</text></svg>" alt="Mum's Space Logo" class="w-64 md:w-80 h-auto mx-auto relative z-10">
+                </div>
+            </div>
+
+            <!-- Main Content Card -->
+            <div class="section-card rounded-3xl p-8 md:p-12 text-center shadow-xl max-w-2xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold mb-6 text-mums-dark">Welcome to Mum's Space</h1>
+                <p class="text-lg md:text-xl mb-8 leading-relaxed">The private support space for mums and women—by mums, for mums. Connect, share, and find your community in a safe, supportive environment.</p>
+                
+                <button class="bg-mums-accent hover:bg-mums-dark text-white font-semibold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    Download / Join Today
+                </button>
+                
+                <div class="mt-8 p-4 bg-mums-light bg-opacity-50 rounded-2xl">
+                    <p class="text-sm md:text-base text-mums-dark font-medium">
+                        <strong>Important:</strong> Mum's Space is a women-only community. By joining, you affirm you are a woman/mum and agree to our community guidelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-overlay py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-card rounded-3xl p-8 md:p-12 shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Download the App</h2>
+                
+                <!-- Download Options -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- iPhone -->
+                    <div class="download-icon text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">iPhone</h3>
+                        <p class="text-sm mb-4 text-gray-600">Download from the App Store</p>
+                        <button class="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors">
+                            Download for iOS
+                        </button>
+                    </div>
+
+                    <!-- Android -->
+                    <div class="download-icon text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1518-.5972.416.416 0 00-.5972.1518l-2.0223 3.5046C15.5889 8.6039 13.8375 8.1987 12 8.1987s-3.5889.4052-5.1765 1.0131L4.8012 5.6072a.416.416 0 00-.5972-.1518.416.416 0 00-.1518.5972L6.0495 9.3214C2.9647 11.0818.6666 13.8036 0 17.0066h24c-.6666-3.203-2.9647-5.9248-6.0955-7.6852z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Android</h3>
+                        <p class="text-sm mb-4 text-gray-600">Get it on Google Play</p>
+                        <button class="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors">
+                            Download for Android
+                        </button>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="download-icon text-center p-6 rounded-2xl bg-white bg-opacity-50 hover:bg-opacity-70 transition-all cursor-pointer">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-mums-accent rounded-2xl flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.351"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">PC/Desktop</h3>
+                        <p class="text-sm mb-4 text-gray-600">Windows & Mac compatible</p>
+                        <button class="bg-mums-accent text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-mums-dark transition-colors">
+                            Download for PC
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Installation Instructions -->
+                <div class="mt-12 p-6 bg-mums-light bg-opacity-50 rounded-2xl">
+                    <h4 class="text-lg font-semibold mb-4">Installation Instructions:</h4>
+                    <div class="grid md:grid-cols-2 gap-6 text-sm">
+                        <div>
+                            <h5 class="font-medium mb-2">Mobile (iOS/Android):</h5>
+                            <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                                <li>Click your platform's download button</li>
+                                <li>You'll be redirected to the app store</li>
+                                <li>Tap "Install" or "Get"</li>
+                                <li>Open the app and create your account</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h5 class="font-medium mb-2">Desktop:</h5>
+                            <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                                <li>Click "Download for PC"</li>
+                                <li>Run the downloaded installer</li>
+                                <li>Follow the setup wizard</li>
+                                <li>Launch and sign up</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-overlay py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-card rounded-3xl p-8 md:p-12 shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">About Mum's Space</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Abstract image representing community and support -->
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Women supporting each other in a warm, caring environment" class="rounded-2xl shadow-lg w-full h-auto">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+                        <p class="mb-6 leading-relaxed">Mum's Space was born from the understanding that motherhood, while beautiful, can be isolating. We created a sanctuary where women can connect authentically, share experiences, and support one another through every stage of their journey.</p>
+                        
+                        <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+                        <p class="mb-6 leading-relaxed">To provide a safe, inclusive, and supportive digital space where mothers and women can build meaningful connections, share wisdom, seek advice, and celebrate the ups and downs of motherhood together.</p>
+                    </div>
+                </div>
+
+                <!-- Values -->
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">Support</h4>
+                        <p class="text-sm text-gray-600">We believe in lifting each other up through every challenge and celebration.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                            <span class="text-2xl">🔒</span>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">Privacy</h4>
+                        <p class="text-sm text-gray-600">Your conversations and personal information are always protected and secure.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
+                            <span class="text-2xl">💕</span>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">Community</h4>
+                        <p class="text-sm text-gray-600">Building genuine connections that last beyond the digital space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-overlay py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-card rounded-3xl p-8 md:p-12 shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Contact & Support</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl border border-mums-accent border-opacity-30 bg-white bg-opacity-70 focus:ring-2 focus:ring-mums-accent focus:border-transparent transition-all" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-mums-accent border-opacity-30 bg-white bg-opacity-70 focus:ring-2 focus:ring-mums-accent focus:border-transparent transition-all" placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-mums-accent border-opacity-30 bg-white bg-opacity-70 focus:ring-2 focus:ring-mums-accent focus:border-transparent transition-all">
+                                    <option>General Inquiry</option>
+                                    <option>Technical Support</option>
+                                    <option>Community Guidelines</option>
+                                    <option>Account Issues</option>
+                                    <option>Suggestions</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-mums-accent border-opacity-30 bg-white bg-opacity-70 focus:ring-2 focus:ring-mums-accent focus:border-transparent transition-all" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-mums-accent hover:bg-mums-dark text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Other Ways to Reach Us</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email Support</h4>
+                                    <p class="text-gray-600">support@mumsspace.com</p>
+                                    <p class="text-sm text-gray-500">We respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Social Media</h4>
+                                    <p class="text-gray-600">@mumsspace</p>
+                                    <p class="text-sm text-gray-500">Follow us for updates and tips</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-mums-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">FAQ & Help Center</h4>
+                                    <p class="text-gray-600">Find instant answers</p>
+                                    <p class="text-sm text-gray-500">Available 24/7 in the app</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-mums-light bg-opacity-50 rounded-xl">
+                            <h4 class="font-semibold mb-2">Emergency Support</h4>
+                            <p class="text-sm text-gray-600">If you're in crisis or need immediate help, please contact your local emergency services or mental health crisis line.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section id="policies" class="content-overlay py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-card rounded-3xl p-8 md:p-12 shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-mums-dark">Policies & Guidelines</h2>
+                
+                <div class="space-y-8">
+                    <!-- Women-Only Policy -->
+                    <div class="p-6 bg-mums-light bg-opacity-50 rounded-2xl border-l-4 border-mums-accent">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="mr-3">👥</span>
+                            Women-Only Community Policy
+                        </h3>
+                        <p class="mb-4">Mum's Space is exclusively for women, mothers, and those who identify as women. This policy ensures:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-6">
+                            <li>A safe space for women to share personal experiences</li>
+                            <li>Gender-specific discussions about motherhood and women's issues</li>
+                            <li>Protection from inappropriate behavior often found in mixed-gender spaces</li>
+                            <li>Authentic conversations without fear of judgment</li>
+                        </ul>
+                        <p class="mt-4 font-medium">By joining, you confirm you identify as a woman and agree to maintain the integrity of our women-only space.</p>
+                    </div>
+
+                    <!-- Community Guidelines -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="mr-3">📋</span>
+                            Community Guidelines
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-4 bg-white bg-opacity-50 rounded-xl">
+                                <h4 class="font-semibold text-green-700 mb-2">✓ We Encourage:</h4>
+                                <ul class="text-sm space-y-1 text-gray-700">
+                                    <li>• Respectful and supportive communication</li>
+                                    <li>• Sharing experiences and advice</li>
+                                    <li>• Asking questions without shame</li>
+                                    <li>• Celebrating each other's wins</li>
+                                    <li>• Offering help when possible</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-white bg-opacity-50 rounded-xl">
+                                <h4 class="font-semibold text-red-700 mb-2">✗ Not Allowed:</h4>
+                                <ul class="text-sm space-y-1 text-gray-700">
+                                    <li>• Harassment or bullying</li>
+                                    <li>• Spam or promotional content</li>
+                                    <li>• Sharing personal information of others</li>
+                                    <li>• Discriminatory language</li>
+                                    <li>• Medical advice (share experiences only)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Policy -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="mr-3">🔒</span>
+                            Privacy & Data Protection
+                        </h3>
+                        <div class="bg-white bg-opacity-50 rounded-xl p-6">
+                            <p class="mb-4">Your privacy is our priority. Here's how we protect your information:</p>
+                            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                                <div>
+                                    <h5 class="font-medium mb-2">Data We Collect:</h5>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li>• Profile information you provide</li>
+                                        <li>• Messages and posts you share</li>
+                                        <li>• App usage and preferences</li>
+                                        <li>• Device and connection information</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">How We Protect You:</h5>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li>• End-to-end encryption for messages</li>
+                                        <li>• No data sharing with third parties</li>
+                                        <li>• Secure servers and regular audits</li>
+                                        <li>• You control your data and can delete it</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms of Service -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <span class="mr-3">📄</span>
+                            Terms of Service
+                        </h3>
+                        <div class="bg-white bg-opacity-50 rounded-xl p-6 text-sm space-y-4">
+                            <p><strong>Account Responsibility:</strong> You are responsible for maintaining your account security and the content you post.</p>
+                            <p><strong>Content Ownership:</strong> You retain rights to your content, but grant us license to display it within the app.</p>
+                            <p><strong>Acceptable Use:</strong> Use the platform respectfully and in accordance with our community guidelines.</p>
+                            <p><strong>Termination:</strong> We reserve the right to suspend accounts that violate our terms or community guidelines.</p>
+                            <p><strong>Changes:</strong> We may update these terms with notice to users.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact for Policies -->
+                <div class="mt-8 text-center p-6 bg-mums-accent bg-opacity-10 rounded-2xl">
+                    <p class="text-sm">
+                        Questions about our policies? Contact us at 
+                        <a href="mailto:policies@mumsspace.com" class="text-mums-accent font-medium hover:underline">policies@mumsspace.com</a>
+                    </p>
+                    <p class="text-xs text-gray-600 mt-2">Last updated: January 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="content-overlay bg-white bg-opacity-90 backdrop-blur-md py-12 mt-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'><rect width='200' height='60' fill='%23ec719e' rx='8'/><text x='100' y='35' text-anchor='middle' fill='white' font-family='serif' font-size='20' font-weight='600'>Mum's Space</text><text x='100' y='48' text-anchor='middle' fill='white' font-family='serif' font-size='10'>❤️</text></svg>" alt="Mum's Space Logo" class="h-12 w-auto mx-auto mb-6">
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#home" class="text-mums-dark hover:text-mums-accent transition-colors">Home</a>
+                    <a href="#download" class="text-mums-dark hover:text-mums-accent transition-colors">Download</a>
+                    <a href="#about" class="text-mums-dark hover:text-mums-accent transition-colors">About</a>
+                    <a href="#contact" class="text-mums-dark hover:text-mums-accent transition-colors">Contact</a>
+                    <a href="#policies" class="text-mums-dark hover:text-mums-accent transition-colors">Policies</a>
+                </div>
+                
+                <p class="text-sm text-gray-600 mb-4">
+                    A safe, supportive community for mothers and women worldwide.
+                </p>
+                
+                <p class="text-xs text-gray-500">
+                    © 2024 Mum's Space. All rights reserved. | Made with ❤️ for mums everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close mobile menu when clicking on links
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Form submission handling
+        (function() {
+            const contactForm = document.querySelector('#contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form submission logic
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                });
+            }
+        })();
+
+        // Download button functionality
+        (function() {
+            const downloadButtons = document.querySelectorAll('.download-icon button, .bg-mums-accent');
+            downloadButtons.forEach(button => {
+                if (button.textContent.includes('Download') || button.textContent.includes('Join')) {
+                    button.addEventListener('click', function() {
+                        // TODO: Implement actual download logic
+                        alert('Download functionality will be implemented here!');
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
