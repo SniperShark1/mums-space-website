@@ -1,4 +1,4 @@
-import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen } from "lucide-react";
+import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen, Clock, Mail } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -400,6 +400,40 @@ const Home = () => {
               <p className="text-sm text-gray-600">
                 All versions are free to download. Join our growing community of supportive mothers!
               </p>
+            </div>
+
+            {/* Important Notice */}
+            <div className="mt-12 p-8 bg-mums-accent bg-opacity-10 rounded-2xl border-2 border-mums-accent border-opacity-20">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 bg-mums-accent rounded-full flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold mb-4 text-mums-dark">Important: Our App Isn't Ready Yet!</h3>
+                
+                <div className="max-w-2xl mx-auto space-y-3 mb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    We're putting the finishing touches on Mum's Space to ensure it's the perfect supportive community you deserve. 
+                    We're building a thriving community of mothers first, so when the app launches, it will be completely ready and filled with engaged, supportive women.
+                  </p>
+                </div>
+                
+                <div className="flex justify-center mb-6">
+                  <div className="flex items-center gap-3 bg-white bg-opacity-80 px-6 py-3 rounded-full">
+                    <Mail className="w-5 h-5 text-mums-accent" />
+                    <span className="font-medium text-mums-dark">Get notified when we launch!</span>
+                  </div>
+                </div>
+                
+                <Button 
+                  onClick={() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-mums-accent hover:bg-mums-dark text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300"
+                >
+                  Join Our Newsletter
+                </Button>
+              </div>
             </div>
           </Card>
         </div>
