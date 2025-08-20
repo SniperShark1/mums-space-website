@@ -3,9 +3,34 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertNewsletterSchema, insertReviewSchema, adminReplySchema } from "@shared/schema";
 
+// Simple rate limiting store (in production, use Redis or similar)
+const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
+
+function rateLimit(ip: string, maxRequests: number = 5, windowMs: number = 15 * 60 * 1000): boolean {
+  const now = Date.now();
+  const clientData = rateLimitStore.get(ip);
+  
+  if (!clientData || now > clientData.resetTime) {
+    rateLimitStore.set(ip, { count: 1, resetTime: now + windowMs });
+    return true;
+  }
+  
+  if (clientData.count >= maxRequests) {
+    return false;
+  }
+  
+  clientData.count++;
+  return true;
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Newsletter signup endpoint
+  // Newsletter signup endpoint with rate limiting
   app.post("/api/newsletter/signup", async (req, res) => {
+    // Basic rate limiting
+    const clientIp = req.ip || req.connection.remoteAddress || 'unknown';
+    if (!rateLimit(clientIp, 3, 15 * 60 * 1000)) { // 3 requests per 15 minutes
+      return res.status(429).json({ error: "Too many requests. Please try again later." });
+    }
     try {
       const validatedData = insertNewsletterSchema.parse(req.body);
       

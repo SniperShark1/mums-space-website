@@ -49,38 +49,17 @@ const Home = () => {
   const totalDownloads = downloadStats?.reduce((sum, stat) => sum + stat.downloadCount, 0) || 0;
 
   const handleDownload = async (platform: string) => {
-    // Define file URLs for actual app downloads
-    const fileUrls: { [key: string]: string } = {
-      'iPhone': '/downloads/mums-space-ios.ipa',
-      'Android': '/downloads/mums-space-android.apk', 
-      'PC': '/downloads/mums-space-pc.exe'
-    };
+    // Show message that app is not ready yet and direct to newsletter
+    toast({
+      title: "App Not Ready Yet",
+      description: "Our app is still in development. Join our newsletter to be notified when it launches!",
+      variant: "default",
+    });
     
-    const fileUrl = fileUrls[platform];
-    
-    if (fileUrl) {
-      // Increment download counter
-      downloadMutation.mutate(platform);
-      
-      // Start actual file download
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      link.download = `mums-space-${platform.toLowerCase()}`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      toast({
-        title: "Download started!",
-        description: `Your ${platform} app is downloading now.`,
-      });
-    } else {
-      toast({
-        title: "Coming soon!",
-        description: `The ${platform} version will be available soon.`,
-        variant: "destructive",
-      });
-    }
+    // Scroll to newsletter section
+    setTimeout(() => {
+      document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' });
+    }, 1000);
   };
 
   return (
@@ -112,6 +91,8 @@ const Home = () => {
             <Button 
               onClick={() => document.getElementById('app-features')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-mums-accent hover:bg-mums-dark text-white font-semibold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              data-testid="button-explore-features"
+              aria-label="Explore Mum's Space app features"
             >
               Explore What's Inside
             </Button>
@@ -364,8 +345,10 @@ const Home = () => {
                 onClick={() => handleDownload('iPhone')}
                 disabled={downloadMutation.isPending}
                 className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+                data-testid="button-download-iphone"
+                aria-label="Download Mum's Space for iPhone"
               >
-                <Smartphone className="w-8 h-8" />
+                <Smartphone className="w-8 h-8" aria-hidden="true" />
                 <div>
                   <div className="font-semibold">iPhone</div>
                   <div className="text-sm opacity-75">iOS App</div>
@@ -376,8 +359,10 @@ const Home = () => {
                 onClick={() => handleDownload('Android')}
                 disabled={downloadMutation.isPending}
                 className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+                data-testid="button-download-android"
+                aria-label="Download Mum's Space for Android"
               >
-                <Smartphone className="w-8 h-8" />
+                <Smartphone className="w-8 h-8" aria-hidden="true" />
                 <div>
                   <div className="font-semibold">Android</div>
                   <div className="text-sm opacity-75">APK Download</div>
@@ -388,8 +373,10 @@ const Home = () => {
                 onClick={() => handleDownload('PC')}
                 disabled={downloadMutation.isPending}
                 className="flex flex-col items-center gap-3 h-auto py-6 px-4 bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-mums-accent transition-all duration-300"
+                data-testid="button-download-pc"
+                aria-label="Download Mum's Space for PC and Mac"
               >
-                <Monitor className="w-8 h-8" />
+                <Monitor className="w-8 h-8" aria-hidden="true" />
                 <div>
                   <div className="font-semibold">PC/Mac</div>
                   <div className="text-sm opacity-75">Desktop App</div>

@@ -8,6 +8,25 @@ This is a React-based promotional website for Mum's Space, a women-only communit
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (August 2025)
+
+### Pre-Launch Production Optimizations
+- **SEO Enhancement**: Added comprehensive meta tags, Open Graph, Twitter Cards, structured data (JSON-LD)
+- **Security**: Implemented rate limiting for newsletter endpoint (3 requests per 15 minutes)
+- **Accessibility**: Added ARIA labels and test-ids to all interactive elements
+- **Performance**: Optimized image loading, added robots.txt and sitemap.xml
+- **Error Handling**: Created error boundary component for graceful error recovery
+- **Build Verification**: Confirmed production build generates correctly (449KB JS, 69KB CSS)
+
+### Founders Program Launch
+- **New Section**: Added Founders Club with $59.99 AUD lifetime membership
+- **Limited Spots**: 100 founding members with exclusive benefits and Wall of Founders
+- **Social Integration**: Facebook follow button, Instagram placeholder removed per user request
+
+### Data Collection Clarification
+- **Privacy Policy**: Updated to reflect minimal data collection (names/usernames only via Google auth)
+- **User Rights**: Added account deletion options through profile page or support contact
+
 ## System Architecture
 
 ### Frontend Architecture
