@@ -32,3 +32,4 @@ This folder contains the actual app files that users can download from your webs
 - Upload files via your hosting provider's file manager
 - Or commit files to your GitHub repository
 - Update file paths in the download handler if needed
+- Test deploy
