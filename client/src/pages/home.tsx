@@ -831,8 +831,8 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">Your Rights</h4>
                       <ul className="ml-6 space-y-1 text-gray-700">
-                        <li>You can request to see, update, or delete your data at any time by contacting our support team.</li>
-                        <li>For more information, email us at support@mumsspace.com.</li>
+                        <li>You can delete your account at any time through your profile page, or if we haven't implemented that yet, contact us and we can delete it for you.</li>
+                        <li>For assistance, email us at support@mumsspace.com.</li>
                       </ul>
                     </div>
 
