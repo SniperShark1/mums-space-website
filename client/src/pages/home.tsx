@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeartBackground from "@/components/HeartBackground";
-import storiesImage from "@assets/Screenshot_31_1755233840917.png";
+import storiesImage from "@assets/stories-updated.png";
 import debatesImage from "@assets/debates-new.png";
 import guidesImage from "@assets/Screenshot_14_1755234349059.png";
 import mealPlannerImage from "@assets/Screenshot_21_1755234508674.png";
