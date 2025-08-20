@@ -804,34 +804,18 @@ const Home = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 flex items-center">
                   <Lock className="mr-3 w-6 h-6" />
-                  Privacy & Data Protection — ID Verification (For Mum's Space Website)
+                  Privacy & Data Protection
                 </h3>
                 <div className="bg-white bg-opacity-50 rounded-xl p-6">
                   <div className="space-y-6">
 
 
                     <div>
-                      <h4 className="font-semibold mb-3 text-mums-dark">How is your information used?</h4>
+                      <h4 className="font-semibold mb-3 text-mums-dark">Data Protection</h4>
                       <ul className="ml-6 space-y-1 text-gray-700">
-                        <li>Your ID and selfie are used only to confirm your identity and eligibility for our community.</li>
-                        <li>Your information is not used for any other purpose and is never shared with third parties.</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold mb-3 text-mums-dark">How is your information stored?</h4>
-                      <ul className="ml-6 space-y-1 text-gray-700">
-                        <li>All ID images are stored securely with access limited to our verification team.</li>
-                        <li>As soon as your verification is complete, your ID and selfie are permanently deleted from our system.</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold mb-3 text-mums-dark">How long do we keep your ID?</h4>
-                      <ul className="ml-6 space-y-1 text-gray-700">
-                        <li>We keep your ID images only as long as necessary to review and verify your account.</li>
-                        <li>Once verification is done, all copies of your ID are deleted.</li>
-                        <li>We never keep your ID on file after this.</li>
+                        <li>We protect your personal information and never share it with third parties.</li>
+                        <li>Your data is used only to provide community services and communication.</li>
+                        <li>We maintain secure systems to protect your privacy at all times.</li>
                       </ul>
                     </div>
 
