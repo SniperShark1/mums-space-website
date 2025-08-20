@@ -136,51 +136,7 @@ export class MemStorage implements IStorage {
       }
     }
 
-    // Add some demo reviews
-    if (this.reviews.size === 0) {
-      const demoReviews = [
-        {
-          userName: "Sarah M.",
-          rating: 5,
-          reviewText: "This app has been a lifesaver! The community is so supportive and understanding. I've made genuine friendships here.",
-          verified: true
-        },
-        {
-          userName: "Emma L.",
-          rating: 5,
-          reviewText: "Finally, a safe space where I can share my parenting struggles without judgment. The eBook library is incredibly helpful too!",
-          verified: true
-        },
-        {
-          userName: "Jessica R.",
-          rating: 4,
-          reviewText: "Great app with wonderful features. The chatrooms are well-moderated and the advice I've received has been invaluable.",
-          verified: true
-        },
-        {
-          userName: "Rachel K.",
-          rating: 5,
-          reviewText: "I love being part of this community. It's amazing to connect with other mums who understand what you're going through.",
-          verified: true
-        },
-        {
-          userName: "Lisa P.",
-          rating: 5,
-          reviewText: "The verification process made me feel secure, and the community guidelines ensure respectful conversations. Highly recommend!",
-          verified: true
-        },
-        {
-          userName: "Amy T.",
-          rating: 4,
-          reviewText: "Wonderful platform for mothers. The eBook collection has helped me so much with various parenting challenges.",
-          verified: true
-        }
-      ];
-
-      for (const demoReview of demoReviews) {
-        await this.addReview(demoReview as InsertReview);
-      }
-    }
+    // Reviews start empty - no demo data
   }
 }
 
