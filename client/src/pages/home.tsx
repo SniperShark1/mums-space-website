@@ -210,12 +210,20 @@ const Home = () => {
                   <p className="text-sm text-gray-600">Create your own group for more focused conversations (playgroups, single mums, special needs, and more).</p>
                 </div>
                 
-                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl md:col-span-2 lg:col-span-1">
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
                   <div className="w-16 h-16 mx-auto mb-4 bg-mums-accent rounded-full flex items-center justify-center">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-lg font-semibold mb-3 text-mums-dark">Fun & Expressive</h4>
                   <p className="text-sm text-gray-600">Emojis and nicknames keep things light and personal.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white bg-opacity-50 rounded-2xl">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <Crown className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3 text-mums-dark">Exclusive Founders Chat</h4>
+                  <p className="text-sm text-gray-600">Access a private chatroom reserved only for our founding members—connect with the first 100 mothers who believed in us.</p>
                 </div>
               </div>
             </div>
