@@ -808,12 +808,7 @@ const Home = () => {
                 </h3>
                 <div className="bg-white bg-opacity-50 rounded-xl p-6">
                   <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-mums-dark">Why do we verify your ID?</h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        To keep Mum's Space a safe, supportive women-only community, we may ask you to upload a photo of your government-issued ID and a selfie. This helps us protect against fake accounts and keep all members safe.
-                      </p>
-                    </div>
+
 
                     <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">How is your information used?</h4>
