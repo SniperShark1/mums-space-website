@@ -1,4 +1,4 @@
-import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen, Clock, Mail, Star, Crown, Facebook, Instagram } from "lucide-react";
+import { Smartphone, Monitor, Download, Heart, Users, Lock, CheckCircle, BookOpen, Clock, Mail, Star, Crown, Facebook } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -826,11 +826,11 @@ const Home = () => {
               {/* Social Media Section */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="text-lg text-gray-700 mb-6">
-                  Prefer socials? Follow us on Facebook and Instagram for updates, sneak peeks, and community prompts. 
+                  Prefer socials? Follow us on Facebook for updates, sneak peeks, and community prompts. 
                   <span className="text-mums-dark font-medium"> (Email gets first dibs on big announcements.)</span>
                 </p>
                 
-                <div className="flex justify-center gap-4">
+                <div className="flex justify-center">
                   {/* Facebook Button */}
                   <a
                     href="https://www.facebook.com/profile.php?id=61579660350521"
@@ -841,16 +841,6 @@ const Home = () => {
                     <Facebook className="w-5 h-5" />
                     <span className="font-medium">Follow on Facebook</span>
                   </a>
-                  
-                  {/* Instagram Button - Coming Soon */}
-                  <button
-                    disabled
-                    className="flex items-center gap-3 bg-gray-400 text-white px-6 py-3 rounded-full cursor-not-allowed shadow-lg opacity-75"
-                    title="Instagram coming soon"
-                  >
-                    <Instagram className="w-5 h-5" />
-                    <span className="font-medium">Instagram Soon</span>
-                  </button>
                 </div>
               </div>
               
