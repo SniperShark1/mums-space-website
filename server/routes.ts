@@ -22,6 +22,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const mailchimpListId = process.env.MAILCHIMP_LIST_ID;
       const mailchimpServerPrefix = process.env.MAILCHIMP_SERVER_PREFIX;
 
+      console.log("DEBUG: Mailchimp configuration check");
+      console.log("- API Key exists:", !!mailchimpApiKey);
+      console.log("- List ID:", mailchimpListId);
+      console.log("- Server Prefix:", mailchimpServerPrefix);
+
       if (!mailchimpApiKey || !mailchimpListId || !mailchimpServerPrefix) {
         console.error("Missing Mailchimp configuration");
         return res.status(500).json({ error: "Newsletter service not configured" });
@@ -29,6 +34,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Add subscriber to Mailchimp
       const mailchimpUrl = `https://${mailchimpServerPrefix}.api.mailchimp.com/3.0/lists/${mailchimpListId}/members`;
+      console.log("DEBUG: Mailchimp URL:", mailchimpUrl);
+      
+      const requestBody = {
+        email_address: validatedData.email,
+        status: 'subscribed',
+        merge_fields: {}
+      };
+      console.log("DEBUG: Request body:", JSON.stringify(requestBody, null, 2));
       
       const mailchimpResponse = await fetch(mailchimpUrl, {
         method: 'POST',
@@ -36,24 +49,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
           'Authorization': `Basic ${Buffer.from(`anystring:${mailchimpApiKey}`).toString('base64')}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          email_address: validatedData.email,
-          status: 'subscribed',
-          merge_fields: {}
-        }),
+        body: JSON.stringify(requestBody),
       });
+
+      console.log("DEBUG: Mailchimp response status:", mailchimpResponse.status);
 
       if (!mailchimpResponse.ok) {
         const mailchimpError = await mailchimpResponse.json();
-        console.error("Mailchimp error:", mailchimpError);
+        console.error("Mailchimp error details:");
+        console.error("- Status:", mailchimpResponse.status);
+        console.error("- Error object:", JSON.stringify(mailchimpError, null, 2));
         
         // Check if it's a duplicate email error
         if (mailchimpError.title === "Member Exists") {
           return res.status(400).json({ error: "Email already subscribed" });
         }
         
-        return res.status(500).json({ error: "Failed to subscribe to newsletter" });
+        // Return more specific error information
+        return res.status(500).json({ 
+          error: "Failed to subscribe to newsletter",
+          debug: {
+            mailchimpStatus: mailchimpResponse.status,
+            mailchimpError: mailchimpError.title || "Unknown error",
+            detail: mailchimpError.detail || "No details provided"
+          }
+        });
       }
+
+      const mailchimpData = await mailchimpResponse.json();
+      console.log("DEBUG: Mailchimp success response:", JSON.stringify(mailchimpData, null, 2));
 
       // Store locally as backup
       const newsletterSignup = await storage.addNewsletterSignup(validatedData);

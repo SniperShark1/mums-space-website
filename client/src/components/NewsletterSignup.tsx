@@ -28,6 +28,8 @@ const NewsletterSignup = () => {
 
   const signupMutation = useMutation({
     mutationFn: async (data: NewsletterData) => {
+      console.log("DEBUG: Sending newsletter signup request for:", data.email);
+      
       const response = await fetch('/api/newsletter/signup', {
         method: 'POST',
         headers: {
@@ -36,14 +38,20 @@ const NewsletterSignup = () => {
         body: JSON.stringify(data),
       });
 
+      console.log("DEBUG: Response status:", response.status);
+
       if (!response.ok) {
         const error = await response.json();
+        console.error("DEBUG: Newsletter signup error:", error);
         throw new Error(error.error || 'Failed to subscribe');
       }
 
-      return response.json();
+      const result = await response.json();
+      console.log("DEBUG: Newsletter signup success:", result);
+      return result;
     },
     onSuccess: () => {
+      console.log("DEBUG: Newsletter signup mutation succeeded");
       setIsSubmitted(true);
       toast({
         title: "Successfully subscribed!",
@@ -52,11 +60,12 @@ const NewsletterSignup = () => {
       form.reset();
     },
     onError: (error: Error) => {
+      console.error("DEBUG: Newsletter signup mutation failed:", error);
       toast({
         title: "Subscription failed",
         description: error.message === "Email already subscribed" 
           ? "This email is already subscribed to our newsletter."
-          : "Please try again later.",
+          : `Error: ${error.message}. Check browser console for details.`,
         variant: "destructive",
       });
     },
