@@ -811,6 +811,15 @@ const Home = () => {
 
 
                     <div>
+                      <h4 className="font-semibold mb-3 text-mums-dark">What Information We Collect</h4>
+                      <ul className="ml-6 space-y-1 text-gray-700">
+                        <li>We only store your name and username when you register through Google.</li>
+                        <li>No government IDs, photos, or personal documents are collected or stored.</li>
+                        <li>Registration is handled securely through Google's authentication system.</li>
+                      </ul>
+                    </div>
+
+                    <div>
                       <h4 className="font-semibold mb-3 text-mums-dark">Data Protection</h4>
                       <ul className="ml-6 space-y-1 text-gray-700">
                         <li>We protect your personal information and never share it with third parties.</li>
@@ -820,10 +829,10 @@ const Home = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-3 text-mums-dark">Your rights:</h4>
+                      <h4 className="font-semibold mb-3 text-mums-dark">Your Rights</h4>
                       <ul className="ml-6 space-y-1 text-gray-700">
                         <li>You can request to see, update, or delete your data at any time by contacting our support team.</li>
-                        <li>For more information, see our full Privacy Policy or email us at support@mumsspace.com.</li>
+                        <li>For more information, email us at support@mumsspace.com.</li>
                       </ul>
                     </div>
 
