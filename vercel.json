@@ -2,13 +2,39 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "server/index.ts",
       "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/public"
+      }
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/dist/index.js" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/index.ts"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/public/index.html"
+    }
+  ],
+  "outputDirectory": "dist/public",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --production=false",
+  "functions": {
+    "server/index.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
