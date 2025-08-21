@@ -70,7 +70,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       if (!mailchimpResponse.ok) {
         const mailchimpError = await mailchimpResponse.json();
-        console.error("Mailchimp error:", mailchimpError);
+        console.error('Mailchimp error:', mailchimpError as Error);
         
         // Check if it's a duplicate email error
         if (mailchimpError.title === "Member Exists") {
