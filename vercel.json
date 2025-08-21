@@ -19,6 +19,10 @@
       "dest": "/server/index.ts"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/dist/public/assets/$1"
+    },
+    {
       "handle": "filesystem"
     },
     {
@@ -26,15 +30,5 @@
       "dest": "/dist/public/index.html"
     }
   ],
-  "outputDirectory": "dist/public",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --production=false",
-  "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "outputDirectory": "dist/public"
 }
